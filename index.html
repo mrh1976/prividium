@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Celestia-style Scroll Headline (Centered + Faster Activation)</title>
+  <title>Scroll Effect</title>
   <style>
     body {
       margin: 0;
@@ -21,30 +21,29 @@
       font-size: 20px;
     }
 
-    /* Tall section controlling the sequence */
+    /* Tall scrollable section controlling the whole animation */
     .scrolly-section {
       position: relative;
-      height: 350vh; /* LESS SCROLL = faster activation */
+      height: 350vh;               /* shorter = quicker activation */
       padding: 0 10vw;
       box-sizing: border-box;
     }
 
-    /* Sticky centered container */
+    /* Sticky, centered container */
     .scrolly-sticky {
       position: sticky;
-      top: 50vh;                 /* dead-center vertically */
+      top: 50vh;                    /* perfect vertical center */
       transform: translateY(-50%);
-      height: auto;
       display: flex;
       align-items: center;
-      justify-content: center;   /* center horizontally */
+      justify-content: center;      /* center horizontally */
       text-align: center;
     }
 
     .hero-heading {
       display: flex;
       flex-direction: column;
-      gap: 0.4rem;               /* smaller stacking gap */
+      gap: 0.4rem;                  /* closer spacing between stacked lines */
       align-items: center;
     }
 
@@ -64,6 +63,7 @@
         transform 0.55s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
+    /* Slide-from directions */
     .hero-line[data-direction="left"] {
       transform: translateX(-40vw);
     }
@@ -76,20 +76,6 @@
       opacity: 1;
       transform: translateX(0);
     }
-
-    /* Debug */
-    #debug-indicator {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      padding: 6px 10px;
-      font-size: 12px;
-      background: rgba(0, 0, 0, 0.7);
-      color: #0f0;
-      border-radius: 4px;
-      font-family: monospace;
-      z-index: 9999;
-    }
   </style>
 </head>
 <body>
@@ -99,40 +85,39 @@
   <section id="scrolly" class="scrolly-section">
     <div class="scrolly-sticky">
       <div class="hero-heading">
+
         <div class="hero-line" data-direction="left">
           <h1>Celestia is modular</h1>
         </div>
+
         <div class="hero-line" data-direction="right">
           <h1>It scales with demand</h1>
         </div>
+
         <div class="hero-line" data-direction="left">
           <h1>It enables specialization</h1>
         </div>
+
         <div class="hero-line" data-direction="right">
           <h1>It simplifies deployment</h1>
         </div>
+
       </div>
     </div>
   </section>
 
   <div class="spacer">End of demo</div>
 
-  <div id="debug-indicator">Active index: -1</div>
-
   <script>
     (function () {
       var section = document.getElementById("scrolly");
       var lines   = section ? section.getElementsByClassName("hero-line") : [];
-      var debug   = document.getElementById("debug-indicator");
-
       if (!section || !lines.length) return;
 
-      // Scroll tighter (more sensitive)
-      var ACTIVATE_EASE = 0.85; // 0.80–0.90 = tighter activation spacing
+      /* Smaller number = lines activate sooner */
+      var ACTIVATE_EASE = 0.85;
 
       function setActiveUpTo(index) {
-        debug.textContent = "Active index: " + index;
-
         for (var i = 0; i < lines.length; i++) {
           if (i <= index && index >= 0) {
             lines[i].classList.add("is-active");
@@ -148,7 +133,7 @@
         var secHeight = section.offsetHeight;
         var mid       = window.pageYOffset + (window.innerHeight * ACTIVATE_EASE);
 
-        // If outside section, hide all
+        /* Outside the scroll region → hide everything */
         if (mid < secTop || mid > secTop + secHeight) {
           setActiveUpTo(-1);
           return;
@@ -168,8 +153,7 @@
 
       window.addEventListener("scroll", onScroll);
       window.addEventListener("resize", onScroll);
-
-      onScroll();
+      onScroll(); // initial
     })();
   </script>
 
