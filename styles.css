@@ -434,45 +434,38 @@ body {
 
 .narrative {
   max-width: 1280px;
-  margin: 140px auto 180px;
+  margin: 160px auto 200px;
   padding: 0 80px;
   position: relative;
-  min-height: 180vh; /* enough space to scroll through lines */
+  min-height: 200vh; /* enough scroll room to step through all lines */
 }
 
 .narrative-inner {
   position: sticky;
-  top: 20vh;            /* pins the text around top-third of viewport */
+  top: 20vh;          /* pin around top third of viewport */
   text-align: center;
 }
 
-/* Big, dramatic heading */
-.narrative-heading {
-  font-size: 54px;
+/* Every line is big & bold */
+.narrative-line {
+  font-size: 48px;
   font-weight: 700;
-  line-height: 1.15;
-  margin: 0 0 48px;
+  line-height: 1.25;
+  margin: 0 auto 24px;
+  max-width: 900px;
   color: #050B5A;
 }
 
-/* Story lines */
-.narrative-line {
-  font-size: 26px;
-  line-height: 1.7;
-  margin: 0 auto 28px;
-  max-width: 900px;
-}
-
-/* Base state for every item in the sequence */
+/* Base: hidden & slightly lowered */
 .narrative-item {
-  opacity: 0.18;
-  transform: translateY(22px);
+  opacity: 0;
+  transform: translateY(24px);
   transition:
     opacity 0.4s ease-out,
     transform 0.4s ease-out;
 }
 
-/* Active line as you scroll */
+/* Once activated, full opacity, locked in place */
 .narrative-item.is-active {
   opacity: 1;
   transform: translateY(0);
@@ -482,30 +475,22 @@ body {
 @media (max-width: 1024px) {
   .narrative {
     padding: 0 24px;
-    margin: 100px auto 140px;
-    min-height: 160vh;
-  }
-
-  .narrative-heading {
-    font-size: 40px;
-    margin-bottom: 36px;
+    margin: 120px auto 160px;
+    min-height: 180vh;
   }
 
   .narrative-line {
-    font-size: 22px;
+    font-size: 32px;
+    margin-bottom: 20px;
   }
 }
 
 @media (max-width: 640px) {
   .narrative {
-    min-height: 150vh;
-  }
-
-  .narrative-heading {
-    font-size: 30px;
+    min-height: 170vh;
   }
 
   .narrative-line {
-    font-size: 18px;
+    font-size: 24px;
   }
 }
