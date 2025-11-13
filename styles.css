@@ -186,7 +186,9 @@ body {
     #e4f0ff 45%,
     var(--bg-page) 100%
   );
+  padding-bottom: 80px; /* space for the fade-out */
 }
+
 
 
 .hero {
