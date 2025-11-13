@@ -60,7 +60,6 @@ body {
   height: 32px;
 }
 
-
 .nav-logo-text {
   font-size: 18px;
   font-weight: 600;
@@ -111,7 +110,10 @@ body {
   cursor: pointer;
   border-radius: 999px;
   border: 0;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease,
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    background 0.12s ease,
     color 0.12s ease;
   white-space: nowrap;
 }
@@ -139,7 +141,7 @@ body {
   min-width: 130px;
 }
 
-/* Small triangles in the primary buttons */
+/* Small highlights in the primary buttons */
 .btn-bg-corner {
   pointer-events: none;
   position: absolute;
@@ -186,15 +188,13 @@ body {
     #e4f0ff 45%,
     var(--bg-page) 100%
   );
-  padding-bottom: 80px; /* space for the fade-out */
+  padding-bottom: 24px; /* small fade gap before observers */
 }
-
-
 
 .hero {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 80px 80px 120px;
+  padding: 80px 80px 64px; /* bottom was 120px */
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 80px;
@@ -241,25 +241,23 @@ body {
 
 /* HERO VISUAL */
 
-/* Reset the hero visual container so your SVG displays normally */
 .hero-visual {
   background: none;
   box-shadow: none;
   border-radius: 0;
-  overflow: visible; /* SVG won’t get clipped */
+  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;    /* keeps it on the right in desktop grid */
 }
 
-/* Styling for your uploaded SVG */
 .hero-animation-img {
   width: 100%;
-  max-width: 520px;  /* match previous visual size */
+  max-width: 520px;
   height: auto;
   display: block;
 }
-
 
 /* Responsive hero / nav */
 
@@ -269,7 +267,7 @@ body {
   }
 
   .hero {
-    padding: 56px 24px 80px;
+    padding: 56px 24px 64px;
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -280,7 +278,7 @@ body {
 
   .hero-visual {
     max-width: 440px;
-    margin-right: auto;
+    margin-right: auto; /* bring image under text, aligned left-ish */
   }
 }
 
@@ -400,18 +398,15 @@ body {
   margin: 180px auto 220px;
   padding: 0 80px;
   position: relative;
-
-  /* Tall so we have room to “walk” through the story */
-  min-height: 260vh;
+  min-height: 260vh; /* room to "walk" through lines */
 }
 
 .narrative-inner {
   position: sticky;
-  top: 20vh;          /* pins the text in the upper third of the screen */
+  top: 20vh;      /* pins text in upper third of screen */
   text-align: center;
 }
 
-/* Every line: same big, dramatic style */
 .narrative-line {
   font-size: 48px;
   font-weight: 700;
@@ -420,12 +415,12 @@ body {
   max-width: 900px;
   color: #070EA0;
 
-  /* starting state; JS overrides these via inline style */
   opacity: 0;
   transform: translateY(40px);
 }
 
-/* Responsive */
+/* Narrative responsive */
+
 @media (max-width: 1024px) {
   .narrative {
     padding: 0 24px;
