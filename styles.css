@@ -180,28 +180,16 @@ body {
 /* HERO */
 
 .hero-wrapper {
-  background:
-    radial-gradient(circle at 85% 8%, rgba(210, 245, 255, 0.9), transparent 55%),
-    radial-gradient(circle at 15% 0%, rgba(191, 212, 255, 0.9), transparent 55%),
-    #ffffff;
-}
-.hero-wrapper {
-  position: relative;
+  background: linear-gradient(
+    180deg,
+    #d4e6ff 0%,   /* richer blue near the top */
+    #e4f0ff 45%,  /* mid fade */
+    #f7f9fc 100%  /* same as page background at the bottom */
+  );
 }
 
-.hero-wrapper::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 260px; /* adjust fade length */
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 0%,
-    #f7f9fc 100%
-  );
-  pointer-events: none;
+.hero-wrapper {
+  position: relative;
 }
 
 .hero {
