@@ -363,28 +363,41 @@ body {
 .observers-card {
   background: #f7f9fc;
   border-radius: 20px;
-  padding: 60px 110px;
+  padding: 40px 48px;
   display: flex;
   flex-direction: column;
-  gap: 72px;
+  gap: 32px;
   box-shadow: 0 1px 2px rgba(10, 13, 18, 0.04);
 }
 
+/* Each row of logos */
 .observers-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 40px;
+  flex-wrap: nowrap;
 }
 
-.observers-row img {
-  max-height: 80px;
+/* Logo “slots” */
+.observer-logo {
+  flex: 0 1 180px;              /* similar visual width per logo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Actual images */
+.observer-logo img {
+  max-height: 45px;             /* keeps them visually aligned */
   width: auto;
+  max-width: 100%;
   object-fit: contain;
+  display: block;
   filter: grayscale(15%);
 }
 
-/* Responsive tweak */
+/* Responsive tweaks */
 @media (max-width: 1024px) {
   .observers {
     padding: 0 24px;
@@ -396,7 +409,24 @@ body {
 
   .observers-row {
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 32px;
+    gap: 24px;
+  }
+
+  .observer-logo {
+    flex: 1 1 40%;
+  }
+
+  .observer-logo img {
+    max-height: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .observer-logo {
+    flex: 1 1 100%;
+  }
+
+  .observer-logo img {
+    max-height: 32px;
   }
 }
