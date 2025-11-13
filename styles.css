@@ -298,7 +298,7 @@ body {
   background: radial-gradient(circle at 50% 50%, #ffffff, rgba(210, 245, 255, 0.1));
 }
 
-/* Responsive */
+/* Responsive hero / nav */
 
 @media (max-width: 1024px) {
   .nav {
@@ -323,7 +323,7 @@ body {
 
 @media (max-width: 720px) {
   .nav-links {
-    display: none; /* keep it simple for now */
+    display: none;
   }
 
   .hero-title {
@@ -345,6 +345,7 @@ body {
     justify-content: center;
   }
 }
+
 /* SELECTED OBSERVERS */
 
 .observers {
@@ -370,7 +371,6 @@ body {
   box-shadow: 0 1px 2px rgba(10, 13, 18, 0.04);
 }
 
-/* Each row of logos */
 .observers-row {
   display: flex;
   justify-content: center;
@@ -379,17 +379,15 @@ body {
   flex-wrap: nowrap;
 }
 
-/* Logo “slots” */
 .observer-logo {
-  flex: 0 1 180px;              /* similar visual width per logo */
+  flex: 0 1 180px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Actual images */
 .observer-logo img {
-  max-height: 45px;             /* keeps them visually aligned */
+  max-height: 45px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
@@ -397,7 +395,8 @@ body {
   filter: grayscale(15%);
 }
 
-/* Responsive tweaks */
+/* Observers responsive */
+
 @media (max-width: 1024px) {
   .observers {
     padding: 0 24px;
@@ -430,6 +429,7 @@ body {
     max-height: 32px;
   }
 }
+
 /* NARRATIVE SECTION */
 
 .narrative {
@@ -450,7 +450,6 @@ body {
   color: #0B0B45;
 }
 
-/* Each line of the story */
 .narrative-line {
   font-size: 24px;
   line-height: 1.5;
@@ -463,22 +462,30 @@ body {
               transform .6s ease-out;
 }
 
-/* visible state when scrolled into view */
 .narrative-line.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Gradient text */
 .narrative-gradient {
   background: linear-gradient(120deg, #000000, #4A54FF);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
-/* Responsive */
+/* Narrative responsive */
+
 @media (max-width: 1024px) {
-  .narrative { padding: 0 24px; }
-  .narrative-heading { font-size: 32px; }
-  .narrative-line { font-size: 20px; }
+  .narrative {
+    padding: 0 24px;
+  }
+
+  .narrative-heading {
+    font-size: 32px;
+  }
+
+  .narrative-line {
+    font-size: 20px;
+  }
 }
