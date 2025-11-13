@@ -185,6 +185,24 @@ body {
     radial-gradient(circle at 15% 0%, rgba(191, 212, 255, 0.9), transparent 55%),
     #ffffff;
 }
+.hero-wrapper {
+  position: relative;
+}
+
+.hero-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 180px; /* adjust fade length */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    #f7f9fc 100%
+  );
+  pointer-events: none;
+}
 
 .hero {
   max-width: 1280px;
