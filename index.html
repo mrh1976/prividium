@@ -2,504 +2,179 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ZKsync Prividium – Execute Privately, Verify Publicly</title>
+  <title>Prividium — ZKsync</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="styles.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
-  >
-
-  <link rel="stylesheet" href="styles.css" />
+  />
 </head>
+
 <body>
-  <div class="page">
+  <!-- ========================================================= -->
+  <!-- NAVIGATION -->
+  <!-- ========================================================= -->
+  <header class="nav">
+    <div class="nav-left">
+      <a href="#" class="nav-logo">
+        <img src="assets/footer1.png" alt="zkSync Logo" />
+      </a>
+      <nav class="nav-links">
+        <a href="#">Network</a>
+        <a href="#">Products</a>
+        <a href="#">Developers</a>
+        <a href="#">Discover</a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <a href="#contact" class="btn btn-primary">Contact us</a>
+    </div>
+  </header>
 
-    <!-- NAVBAR -->
-    <header class="nav">
-      <div class="nav-left">
-        <a href="#" class="nav-logo">
-          <img src="assets/zksync-logo.svg" alt="zkSync Logo" class="nav-logo-img" />
-        </a>
+  <!-- ========================================================= -->
+  <!-- HERO -->
+  <!-- ========================================================= -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">ZKsync Prividium</p>
+      <h1 class="hero-title">
+        Execute Privately,<br />
+        Verify Publicly
+      </h1>
+      <p class="hero-subtitle-top">Where public and private blockchains converge.</p>
+      <p class="hero-subtitle">
+        Operate with full privacy, compliance, and control — all while inheriting Ethereum’s
+        security and connectivity.
+      </p>
 
-        <nav class="nav-links">
-          <button class="nav-link">
-            <span>Network</span>
-            <span class="nav-link-chevron">▾</span>
-          </button>
-          <button class="nav-link">
-            <span>Products</span>
-            <span class="nav-link-chevron">▾</span>
-          </button>
-          <button class="nav-link">
-            <span>Developers</span>
-            <span class="nav-link-chevron">▾</span>
-          </button>
-          <button class="nav-link">
-            <span>Discover</span>
-            <span class="nav-link-chevron">▾</span>
-          </button>
-        </nav>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary">Download case study</a>
+        <a href="#" class="btn btn-secondary">Talk to our team</a>
       </div>
+    </div>
 
-      <div class="nav-right">
-        <a href="#contact" class="btn btn-primary btn-pill btn-nav">
-          <span class="btn-bg-corner btn-bg-corner-left"></span>
-          <span class="btn-bg-corner btn-bg-corner-right"></span>
-          Contact us
-        </a>
-      </div>
-    </header>
+    <div class="hero-visual">
+      <img src="assets/hero.svg" alt="Hero Illustration" />
+    </div>
+  </section>
 
-    <!-- MAIN CONTENT -->
-    <main>
+  <!-- ========================================================= -->
+  <!-- OBSERVERS LOGO STRIP -->
+  <!-- ========================================================= -->
+  <section class="observers">
+    <h3 class="section-eyebrow">Select Observers</h3>
 
-      <!-- HERO SECTION -->
-      <div class="hero-wrapper">
-        <section class="hero">
-          <div class="hero-content">
-            <p class="hero-eyebrow">ZKsync Prividium</p>
+    <div class="observers-row">
+      <img src="assets/observe1.png" alt="Observer Logo 1" />
+      <img src="assets/observe2.png" alt="Observer Logo 2" />
+      <img src="assets/observe3.png" alt="Observer Logo 3" />
+      <img src="assets/observe4.png" alt="Observer Logo 4" />
+    </div>
 
-            <h1 class="hero-title">
-              Execute Privately,<br />
-              Verify Publicly
-            </h1>
+    <div class="observers-row">
+      <img src="assets/observe5.png" alt="Observer Logo 5" />
+      <img src="assets/observe6.png" alt="Observer Logo 6" />
+      <img src="assets/observe7.png" alt="Observer Logo 7" />
+      <img src="assets/observe8.png" alt="Observer Logo 8" />
+    </div>
+  </section>
 
-            <p class="hero-subtitle hero-subtitle-top">
-              Where public and private blockchains converge.
-            </p>
+  <!-- ========================================================= -->
+  <!-- NARRATIVE SCROLL SECTION -->
+  <!-- ========================================================= -->
+  <section class="narrative">
+    <div class="narrative-inner">
+      <p class="narrative-line">Institutions see the potential of blockchain</p>
+      <p class="narrative-line">
+        automation, transparency, and programmability that can transform how finance moves.
+      </p>
+      <p class="narrative-line">
+        But the very things that make blockchain open and powerful also make it impractical for enterprise use.
+      </p>
+      <p class="narrative-line">
+        Public chains expose sensitive data. Private chains isolate systems and lose network trust.
+      </p>
+      <p class="narrative-line">Prividium removes that tradeoff.</p>
+      <p class="narrative-line">It’s how institutions modernize their infrastructure.</p>
+    </div>
+  </section>
 
-            <p class="hero-subtitle">
-              Operate with full privacy, compliance, and control — all while inheriting
-              Ethereum’s security and connectivity.
-            </p>
+  <!-- ========================================================= -->
+  <!-- “NO COMPROMISES” SECTION (from your Figma screenshots) -->
+  <!-- ========================================================= -->
+  <section class="no-comp">
+    <img src="assets/nocomp1.png" class="no-comp-header" alt="" />
 
-            <div class="hero-actions">
-              <a href="#" class="btn btn-primary btn-pill">
-                <span class="btn-bg-corner btn-bg-corner-left"></span>
-                <span class="btn-bg-corner btn-bg-corner-right"></span>
-                Download case study
-              </a>
+    <div class="no-comp-icons">
+      <div><img src="assets/nocomp2.png" alt="" /></div>
+      <div><img src="assets/nocomp3.png" alt="" /></div>
+      <div><img src="assets/nocomp4.png" alt="" /></div>
+      <div><img src="assets/nocomp5.png" alt="" /></div>
+    </div>
+  </section>
 
-              <a href="#contact" class="btn btn-secondary btn-pill">
-                Talk to our team
-              </a>
-            </div>
-          </div>
+  <!-- ========================================================= -->
+  <!-- COMPARISON TABLE -->
+  <!-- ========================================================= -->
+  <section class="comparison">
+    <img src="assets/comptable.png" class="comparison-table" alt="Comparison Table" />
+  </section>
 
-          <div class="hero-visual">
-            <img
-              src="assets/priv_hero.svg"
-              alt="Prividium hero illustration"
-              class="hero-animation-img"
-            />
-          </div>
-        </section>
-      </div>
+  <!-- ========================================================= -->
+  <!-- USE CASES -->
+  <!-- ========================================================= -->
+  <section class="usecases">
+    <div class="usecases-grid">
+      <img src="assets/use1.png" alt="" />
+      <img src="assets/use2.png" alt="" />
+      <img src="assets/use3.png" alt="" />
+      <img src="assets/use4.png" alt="" />
+      <img src="assets/use5.png" alt="" />
+    </div>
+  </section>
 
-      <!-- SELECTED OBSERVERS -->
-      <section class="observers">
-        <p class="observers-eyebrow">Select Observers</p>
+  <!-- ========================================================= -->
+  <!-- RESEARCH CARDS -->
+  <!-- ========================================================= -->
+  <section class="research">
+    <div class="research-grid">
+      <img src="assets/res1.png" alt="Research 1" />
+      <img src="assets/res2.png" alt="Research 2" />
+    </div>
+  </section>
 
-        <div class="observers-card">
-          <div class="observers-row">
-            <div class="observer-logo">
-              <img src="https://www.figma.com/api/mcp/asset/e13763b2-c657-4b04-8e34-237655ccf195" alt="Deutsche Bank" />
-            </div>
-            <div class="observer-logo">
-              <img src="https://www.figma.com/api/mcp/asset/95db751e-0fab-4bb6-bb40-3b88dcdc8895" alt="US Bank" />
-            </div>
-            <div class="observer-logo">
-              <img src="https://www.figma.com/api/mcp/asset/31c83858-c227-4006-93af-e19c03f67d2a" alt="State Street" />
-            </div>
-            <div class="observer-logo">
-              <img src="https://www.figma.com/api/mcp/asset/72ab91b7-4b95-4449-92ea-8776134bf8c9" alt="UOB" />
-            </div>
-          </div>
+  <!-- ========================================================= -->
+  <!-- TESTIMONIAL -->
+  <!-- ========================================================= -->
+  <section class="testimonial">
+    <img src="assets/test1.png" alt="Testimonial Photo" class="testimonial-photo" />
+    <img src="assets/test2.png" alt="Logo" class="testimonial-logo" />
+  </section>
 
-          <div class="observers-row">
-            <div class="observer-logo">
-              <img src="https://www.figma.com/api/mcp/asset/ac8c38ec-ce0b-4ade-9b04-5167da5db947" alt="Fidelity International" />
-            </div>
-            <div class="observer-logo">
-              <img src="https://www.figma.com/api/mcp/asset/48a43ef0-bedc-4035-beda-36b7461d6e6a" alt="Banco Santander" />
-            </div>
-            <div class="observer-logo">
-              <img src="https://www.figma.com/api/mcp/asset/34e85a32-9851-4045-8c53-e64a8e1cf9b3" alt="Observer logo" />
-            </div>
-          </div>
-        </div>
-      </section>
+  <!-- ========================================================= -->
+  <!-- CONTACT SECTION -->
+  <!-- ========================================================= -->
+  <section class="contact" id="contact">
+    <img src="assets/contact1.png" class="contact-bg" alt="" />
+  </section>
 
-      <!-- NARRATIVE SCROLL SECTION -->
-      <section class="narrative">
-        <div class="narrative-inner">
-          <p class="narrative-line">Institutions see the potential of blockchain</p>
-          <p class="narrative-line">automation, transparency, and programmability that can transform how finance moves.</p>
-          <p class="narrative-line">But the very things that make blockchain open and powerful also make it impractical for enterprise use.</p>
-          <p class="narrative-line">Public chains expose sensitive data. Private chains isolate systems and lose network trust.</p>
-          <p class="narrative-line">Prividium removes that tradeoff.</p>
-          <p class="narrative-line">It’s how institutions modernize their infrastructure.</p>
-        </div>
-      </section>
+  <!-- ========================================================= -->
+  <!-- FOOTER -->
+  <!-- ========================================================= -->
+  <footer class="footer">
+    <img src="assets/footer1.png" alt="Footer Logo" class="footer-logo" />
+    <p>© ZKsync · For interview demo use only</p>
+  </footer>
 
-      <!-- PILLARS / ABOUT PRIVIDIUM -->
-      <section class="pillars">
-        <div class="pillars-inner">
-          <div class="pillars-copy">
-            <p class="section-eyebrow">About Prividium</p>
-            <h2 class="section-title">
-              A full ZK-based blockchain that keeps data private within your infrastructure.
-            </h2>
-            <p class="section-intro">
-              Prividium combines privacy, compliance, control, and interoperability, designed for
-              the demands of regulated institutions and global markets.
-            </p>
-          </div>
-
-          <div class="pillars-layout">
-            <div class="pillars-grid">
-              <article class="pillar-card">
-                <img
-                  src="assets/about-privacy.svg"
-                  alt="Privacy icon"
-                  class="pillar-icon"
-                />
-                <h3 class="pillar-title">Privacy with public proofs</h3>
-                <p class="pillar-body">
-                  Transactions, balances, and counterparties stay confidential while proofs of
-                  state changes are public and independently verifiable.
-                </p>
-              </article>
-
-              <article class="pillar-card">
-                <img
-                  src="assets/about-compliance.svg"
-                  alt="Compliance icon"
-                  class="pillar-icon"
-                />
-                <h3 class="pillar-title">Built-in compliance</h3>
-                <p class="pillar-body">
-                  Role-based access, policy enforcement, and selective disclosure give
-                  compliance teams verifiable control without exposing full ledgers.
-                </p>
-              </article>
-
-              <article class="pillar-card">
-                <img
-                  src="assets/about-enterprise-control.svg"
-                  alt="Enterprise control icon"
-                  class="pillar-icon"
-                />
-                <h3 class="pillar-title">Enterprise control at scale</h3>
-                <p class="pillar-body">
-                  Operators define governance, transaction ordering, and gas policies, with the
-                  option to run multiple Prividium instances in parallel.
-                </p>
-              </article>
-
-              <article class="pillar-card">
-                <img
-                  src="assets/about-direct-connectivity.svg"
-                  alt="Direct connectivity icon"
-                  class="pillar-icon"
-                />
-                <h3 class="pillar-title">Direct connectivity</h3>
-                <p class="pillar-body">
-                  Native connectivity to Ethereum and the ZKsync ecosystem enables seamless
-                  asset and data flows without complex bridging layers.
-                </p>
-              </article>
-            </div>
-
-            <!-- Side illustration -->
-            <div class="pillars-visual">
-              <img
-                src="assets/illustration-main.svg"
-                alt="Prividium architecture illustration"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- USE CASES -->
-      <section class="usecases">
-        <div class="usecases-inner">
-          <header class="usecases-header">
-            <p class="section-eyebrow">Prividium enables new use cases</p>
-            <h2 class="section-title">
-              Private execution with public trust,<br />
-              built for institutional workflows.
-            </h2>
-            <p class="section-intro">
-              From intraday liquidity to cross-entity workflows, Prividium lets institutions
-              modernize core operations without giving up privacy or compliance.
-            </p>
-          </header>
-
-          <div class="usecases-grid">
-            <article class="usecase-card">
-              <img src="assets/usecase-1.svg" alt="" class="usecase-icon" />
-              <h3 class="usecase-title">Real-time intraday settlement</h3>
-              <p class="usecase-body">
-                Move collateral, cash, and positions instantly instead of waiting on batch
-                windows and T+1 rails.
-              </p>
-            </article>
-
-            <article class="usecase-card">
-              <img src="assets/usecase-2.svg" alt="" class="usecase-icon" />
-              <h3 class="usecase-title">Cross-entity workflows</h3>
-              <p class="usecase-body">
-                Coordinate across legal entities, desks, or partners on a single shared
-                ledger with controlled visibility.
-              </p>
-            </article>
-
-            <article class="usecase-card">
-              <img src="assets/usecase-3.svg" alt="" class="usecase-icon" />
-              <h3 class="usecase-title">Compliance-aware automation</h3>
-              <p class="usecase-body">
-                Bake KYC, limits, and approvals directly into onchain logic with audit-ready trails.
-              </p>
-            </article>
-
-            <article class="usecase-card">
-              <img src="assets/usecase-4.svg" alt="" class="usecase-icon" />
-              <h3 class="usecase-title">Tokenized markets with control</h3>
-              <p class="usecase-body">
-                Issue and manage tokenized assets, run auctions, or operate private markets
-                with Ethereum-grade security.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- MARKETS SECTION -->
-      <section class="markets">
-        <div class="markets-inner">
-          <div class="markets-header">
-            <p class="section-eyebrow">Global markets are moving onchain</p>
-            <h2 class="section-title">Connect without tradeoffs.</h2>
-            <p class="section-intro">
-              Tap into global liquidity while keeping sensitive flows, positions, and
-              counterparties under strict control.
-            </p>
-          </div>
-
-          <div class="markets-layout">
-            <div class="markets-grid">
-              <article class="markets-card">
-                <img src="assets/markets-privacy.svg" alt="" class="markets-icon" />
-                <h3 class="markets-card-title">Privacy with operator visibility</h3>
-                <p class="markets-card-body">
-                  Users transact privately, while operators retain the line of sight they
-                  need for risk, reporting, and supervision.
-                </p>
-              </article>
-
-              <article class="markets-card">
-                <img src="assets/markets-access.svg" alt="" class="markets-icon" />
-                <h3 class="markets-card-title">Direct market access</h3>
-                <p class="markets-card-body">
-                  Connect directly to Ethereum and the ZKsync ecosystem instead of routing
-                  through layers of intermediaries and bespoke rails.
-                </p>
-              </article>
-
-              <article class="markets-card">
-                <img src="assets/markets-risk.svg" alt="" class="markets-icon" />
-                <h3 class="markets-card-title">Reduced third-party risk</h3>
-                <p class="markets-card-body">
-                  Run your own chain while using ZK proofs and Ethereum anchoring to
-                  minimize reliance on external infrastructure providers.
-                </p>
-              </article>
-            </div>
-
-            <div class="markets-visual">
-              <img src="assets/markets-illustration.svg" alt="Onchain markets illustration" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- WHY SECTION -->
-      <section class="why">
-        <div class="why-inner">
-          <div class="why-header">
-            <p class="section-eyebrow">Why enterprises move to Prividium</p>
-            <h2 class="section-title">
-              From legacy ledgers and public chains to fit-for-purpose infrastructure.
-            </h2>
-          </div>
-
-          <div class="why-grid">
-            <article class="why-card">
-              <img src="assets/why-ledgers.svg" alt="" class="why-icon" />
-              <h3 class="why-card-title">From permissioned ledgers</h3>
-              <p class="why-card-body">
-                Move beyond closed consortia and opaque governance. Keep privacy while gaining
-                independent verification, connectivity, and Ethereum-grade security.
-              </p>
-            </article>
-
-            <article class="why-card">
-              <img src="assets/why-public.svg" alt="" class="why-icon" />
-              <h3 class="why-card-title">From public chains</h3>
-              <p class="why-card-body">
-                Add privacy, policy enforcement, and controlled disclosure without sacrificing
-                access to liquidity or public settlement guarantees.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="cta" id="contact">
-        <div class="cta-inner">
-          <div class="cta-copy">
-            <img src="assets/cta-badge.svg" alt="" class="cta-badge" />
-            <h2 class="cta-title">Production-ready blockchain for regulated finance.</h2>
-            <p class="cta-body">
-              Deploy Prividium with confidence. Keep data private, stay aligned with regulation,
-              and anchor to Ethereum for unmatched security.
-            </p>
-          </div>
-
-          <div class="cta-actions">
-            <a href="#" class="btn btn-primary btn-pill">Book a demo</a>
-            <a href="#" class="btn btn-secondary btn-pill">Read the docs</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- SIMPLE FORM / CONTACT -->
-      <section class="contact-strip">
-        <div class="contact-inner">
-          <div class="contact-copy">
-            <h3 class="contact-title">Ready to explore Prividium for your institution?</h3>
-            <p class="contact-body">
-              Share your requirements, and our team will follow up with a tailored conversation
-              around architecture, compliance, and rollout.
-            </p>
-          </div>
-          <div class="contact-visual">
-            <img src="assets/section-form.svg" alt="Contact form illustration" />
-          </div>
-        </div>
-      </section>
-
-      <!-- FAQ -->
-      <section class="faq">
-        <div class="faq-inner">
-          <div class="faq-header">
-            <p class="section-eyebrow">Frequently asked questions</p>
-            <h2 class="section-title">Everything you need to know about Prividium.</h2>
-          </div>
-
-          <div class="faq-layout">
-            <div class="faq-list">
-              <article class="faq-item">
-                <h3>Does anchoring to Ethereum expose private data?</h3>
-                <p>No. Only proofs are shared — never transaction data.</p>
-              </article>
-
-              <article class="faq-item">
-                <h3>Is Prividium another permissioned ledger?</h3>
-                <p>
-                  No. ZK proofs replace consortium trust models, with verifiable execution and
-                  public settlement guarantees.
-                </p>
-              </article>
-
-              <article class="faq-item">
-                <h3>How does security hold with a single operator?</h3>
-                <p>
-                  Invalid blocks fail verification automatically. Ethereum and ZKsync enforce
-                  correctness at the settlement layer.
-                </p>
-              </article>
-
-              <article class="faq-item">
-                <h3>Is selective disclosure enough for regulators?</h3>
-                <p>
-                  Yes. Regulators and auditors can verify exactly what they need, backed by
-                  cryptographic proofs instead of manual reconciliations.
-                </p>
-              </article>
-
-              <article class="faq-item">
-                <h3>How does Prividium scale?</h3>
-                <p>
-                  Prividium can scale horizontally with multiple instances and vertically by
-                  optimizing circuit design and proving infrastructure.
-                </p>
-              </article>
-            </div>
-
-            <div class="faq-visual">
-              <img src="assets/faq-illustration.svg" alt="FAQ illustration" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <img src="assets/zksync-logo.svg" alt="zkSync logo" class="footer-logo" />
-          <p class="footer-tagline">
-            ZKsync Prividium — private where it matters, connected where it counts.
-          </p>
-        </div>
-
-        <div class="footer-columns">
-          <div class="footer-col">
-            <h4>Products</h4>
-            <a href="#">Prividium</a>
-            <a href="#">ZK Stack</a>
-            <a href="#">ZKsync Era</a>
-          </div>
-
-          <div class="footer-col">
-            <h4>Developers</h4>
-            <a href="#">Docs</a>
-            <a href="#">GitHub</a>
-            <a href="#">Ecosystem</a>
-          </div>
-
-          <div class="footer-col">
-            <h4>Company</h4>
-            <a href="#">About</a>
-            <a href="#">Careers</a>
-            <a href="#">Contact</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>© ZKsync · For interview demo use</p>
-      </div>
-    </footer>
-
-  </div>
-
-  <!-- Scroll animation script -->
+  <!-- ========================================================= -->
+  <!-- INLINE SCRIPT — NARRATIVE SCROLL LOGIC -->
+  <!-- ========================================================= -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const section = document.querySelector(".narrative");
-      const lines = Array.from(document.querySelectorAll(".narrative-line"));
-      if (!section || !lines.length) return;
+      const lines = [...document.querySelectorAll(".narrative-line")];
 
       function easeInOut(t) {
         return t * t * (3 - 2 * t);
@@ -510,12 +185,11 @@
         const vh = window.innerHeight;
         if (rect.bottom < 0 || rect.top > vh) return;
 
-        const centerY = vh * 0.5;
-        let progress = (centerY - rect.top) / rect.height;
+        const center = vh * 0.5;
+        let progress = (center - rect.top) / rect.height;
         progress = Math.max(0, Math.min(0.999, progress));
 
-        const count = lines.length;
-        const segment = 1 / count;
+        const segment = 1 / lines.length;
 
         lines.forEach((line, i) => {
           const start = segment * i;
@@ -536,11 +210,10 @@
         });
       }
 
-      updateNarrative();
       window.addEventListener("scroll", updateNarrative, { passive: true });
       window.addEventListener("resize", updateNarrative);
+      updateNarrative();
     });
   </script>
-
 </body>
 </html>
