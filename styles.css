@@ -443,30 +443,36 @@ body {
 }
 
 .narrative-heading {
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 1.3;
-  margin: 0 0 32px;
-  color: #0B0B45;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 40px;
+  color: #050B5A; /* strong navy */
 }
 
+/* Base typography for the lines */
 .narrative-line {
   font-size: 24px;
-  line-height: 1.5;
-  margin: 0 auto 24px;
+  line-height: 1.6;
+  margin: 0 auto 28px;
   max-width: 960px;
-
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity .6s ease-out,
-              transform .6s ease-out;
 }
 
-.narrative-line.is-visible {
+/* Shared animation state for heading + lines */
+.narrative-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s ease-out,
+    transform 0.7s ease-out;
+}
+
+.narrative-item.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
+/* Gradient text for the story lines */
 .narrative-gradient {
   background: linear-gradient(120deg, #000000, #4A54FF);
   -webkit-background-clip: text;
@@ -474,18 +480,30 @@ body {
   color: transparent;
 }
 
-/* Narrative responsive */
-
+/* Responsive */
 @media (max-width: 1024px) {
   .narrative {
     padding: 0 24px;
+    margin: 72px auto 96px;
   }
 
   .narrative-heading {
-    font-size: 32px;
+    font-size: 34px;
+    margin-bottom: 32px;
   }
 
   .narrative-line {
     font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .narrative-heading {
+    font-size: 28px;
+  }
+
+  .narrative-line {
+    font-size: 18px;
   }
 }
