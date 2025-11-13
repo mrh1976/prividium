@@ -133,9 +133,9 @@
 <section class="narrative">
   <div class="narrative-inner">
 
-    <h2 class="narrative-heading narrative-item">
+    <p class="narrative-line narrative-item">
       Institutions see the potential of blockchain
-    </h2>
+    </p>
 
     <p class="narrative-line narrative-item">
       automation, transparency, and programmability that can transform how finance moves.
@@ -163,6 +163,7 @@
 </section>
 
 
+
     </main>
 
   </div>
@@ -177,33 +178,33 @@
     function updateActive() {
       const rect = section.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
-
-      // If the section is completely off-screen, clear active states
-      if (rect.bottom < 0 || rect.top > viewportHeight) {
-        items.forEach(item => item.classList.remove("is-active"));
-        return;
-      }
-
-      // Progress of viewport center through the section (0 → 1)
       const centerY = viewportHeight * 0.5;
+
+      // If section is totally off-screen, don't animate
+      if (rect.bottom < 0 || rect.top > viewportHeight) return;
+
+      // Progress of the viewport center through the section (0 → 1)
       let progress = (centerY - rect.top) / rect.height;
       progress = Math.max(0, Math.min(0.999, progress));
 
-      // Map progress to which item should be active
       const index = Math.floor(progress * items.length);
 
       items.forEach((item, i) => {
-        if (i === index) item.classList.add("is-active");
-        else item.classList.remove("is-active");
+        // <= index is cumulative: previous lines stay visible
+        if (i <= index) {
+          item.classList.add("is-active");
+        } else {
+          item.classList.remove("is-active");
+        }
       });
     }
 
-    // Run on load + on scroll
     updateActive();
     window.addEventListener("scroll", updateActive, { passive: true });
     window.addEventListener("resize", updateActive);
   });
 </script>
+
 
 
 </body>
