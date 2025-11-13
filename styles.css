@@ -195,7 +195,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 180px; /* adjust fade length */
+  height: 260px; /* adjust fade length */
   background: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0) 0%,
