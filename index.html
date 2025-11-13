@@ -19,7 +19,6 @@
     <header class="nav">
       <div class="nav-left">
         <a href="#" class="nav-logo">
-          <!-- Quick SVG “ZKsync-ish” placeholder logo -->
           <span class="nav-logo-mark"></span>
           <span class="nav-logo-text">zkSync</span>
         </a>
@@ -87,7 +86,6 @@
         </div>
 
         <div class="hero-visual">
-          <!-- Simplified hero visualization based on your Figma composition -->
           <div class="hero-orbit hero-orbit-outer"></div>
           <div class="hero-orbit hero-orbit-middle"></div>
           <div class="hero-orbit hero-orbit-inner"></div>
@@ -96,7 +94,8 @@
           </div>
         </div>
       </section>
-<!-- SELECTED OBSERVERS (LOGO STRIP) -->
+
+      <!-- SELECTED OBSERVERS (LOGO STRIP) -->
       <section class="observers">
         <p class="observers-eyebrow">Select Observers</p>
 
@@ -129,61 +128,64 @@
           </div>
         </div>
       </section>
-           <!-- NARRATIVE SECTION -->
-<section class="narrative">
-  <div class="narrative-inner">
 
-    <h2 class="narrative-heading">
-      Institutions see the potential of blockchain
-    </h2>
+      <!-- NARRATIVE SECTION -->
+      <section class="narrative">
+        <div class="narrative-inner">
 
-    <p class="narrative-line narrative-gradient">
-      automation, transparency, and programmability that can transform how finance moves.
-    </p>
+          <h2 class="narrative-heading">
+            Institutions see the potential of blockchain
+          </h2>
 
-    <p class="narrative-line narrative-gradient">
-      But the very things that make blockchain open and powerful also make it impractical for enterprise use.
-    </p>
+          <p class="narrative-line narrative-gradient">
+            automation, transparency, and programmability that can transform how finance moves.
+          </p>
 
-    <p class="narrative-line narrative-gradient">
-      Public chains expose sensitive data. Private chains isolate systems and lose network trust.
-      The tradeoff between innovation and control has stalled progress.
-    </p>
+          <p class="narrative-line narrative-gradient">
+            But the very things that make blockchain open and powerful also make it impractical for enterprise use.
+          </p>
 
-    <p class="narrative-line narrative-gradient">
-      Prividium removes that tradeoff.
-    </p>
+          <p class="narrative-line narrative-gradient">
+            Public chains expose sensitive data. Private chains isolate systems and lose network trust.
+            The tradeoff between innovation and control has stalled progress.
+          </p>
 
-    <p class="narrative-line narrative-gradient">
-      It’s how institutions modernize their infrastructure. No more sacrificing on privacy,
-      compliance, or trust.
-    </p>
+          <p class="narrative-line narrative-gradient">
+            Prividium removes that tradeoff.
+          </p>
 
-  </div>
-</section>
+          <p class="narrative-line narrative-gradient">
+            It’s how institutions modernize their infrastructure. No more sacrificing on privacy,
+            compliance, or trust.
+          </p>
 
+        </div>
+      </section>
 
     </main>
 
   </div>
- <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const lines = document.querySelectorAll(".narrative-line");
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-        }
-      });
-    }, { threshold: 0.3 });
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const lines = document.querySelectorAll(".narrative-line");
 
-    lines.forEach(line => observer.observe(line));
-  });
-</script>
+      if (!("IntersectionObserver" in window) || lines.length === 0) {
+        lines.forEach(line => line.classList.add("is-visible"));
+        return;
+      }
 
-</body>
-</html>
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
 
+      lines.forEach(line => observer.observe(line));
+    });
+  </script>
 </body>
 </html>
