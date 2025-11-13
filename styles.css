@@ -434,73 +434,75 @@ body {
 
 .narrative {
   max-width: 1280px;
-  margin: 96px auto 120px;
+  margin: 140px auto 180px;
   padding: 0 80px;
+  position: relative;
+  min-height: 180vh; /* enough space to scroll through lines */
 }
 
 .narrative-inner {
+  position: sticky;
+  top: 20vh;            /* pins the text around top-third of viewport */
   text-align: center;
 }
 
+/* Big, dramatic heading */
 .narrative-heading {
-  font-size: 44px;
+  font-size: 54px;
   font-weight: 700;
-  line-height: 1.2;
-  margin: 0 0 40px;
-  color: #050B5A; /* strong navy */
+  line-height: 1.15;
+  margin: 0 0 48px;
+  color: #050B5A;
 }
 
-/* Base typography for the lines */
+/* Story lines */
 .narrative-line {
-  font-size: 24px;
-  line-height: 1.6;
+  font-size: 26px;
+  line-height: 1.7;
   margin: 0 auto 28px;
-  max-width: 960px;
+  max-width: 900px;
 }
 
-/* Shared animation state for heading + lines */
+/* Base state for every item in the sequence */
 .narrative-item {
-  opacity: 0;
-  transform: translateY(28px);
+  opacity: 0.18;
+  transform: translateY(22px);
   transition:
-    opacity 0.7s ease-out,
-    transform 0.7s ease-out;
+    opacity 0.4s ease-out,
+    transform 0.4s ease-out;
 }
 
-.narrative-item.is-visible {
+/* Active line as you scroll */
+.narrative-item.is-active {
   opacity: 1;
   transform: translateY(0);
-}
-
-/* Gradient text for the story lines */
-.narrative-gradient {
-  background: linear-gradient(120deg, #000000, #4A54FF);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
   .narrative {
     padding: 0 24px;
-    margin: 72px auto 96px;
+    margin: 100px auto 140px;
+    min-height: 160vh;
   }
 
   .narrative-heading {
-    font-size: 34px;
-    margin-bottom: 32px;
+    font-size: 40px;
+    margin-bottom: 36px;
   }
 
   .narrative-line {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 22px;
   }
 }
 
 @media (max-width: 640px) {
+  .narrative {
+    min-height: 150vh;
+  }
+
   .narrative-heading {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .narrative-line {
