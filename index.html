@@ -18,10 +18,9 @@
     <!-- NAVBAR -->
     <header class="nav">
       <div class="nav-left">
-       <a href="#" class="nav-logo">
-  <img src="zksync-logo.svg" alt="zkSync Logo" class="nav-logo-img" />
-</a>
-
+        <a href="#" class="nav-logo">
+          <img src="zksync-logo.svg" alt="zkSync Logo" class="nav-logo-img" />
+        </a>
 
         <nav class="nav-links">
           <button class="nav-link">
@@ -52,8 +51,10 @@
       </div>
     </header>
 
-       <!-- HERO SECTION -->
+    <!-- MAIN CONTENT -->
     <main>
+
+      <!-- HERO SECTION -->
       <div class="hero-wrapper">
         <section class="hero">
           <div class="hero-content">
@@ -87,9 +88,7 @@
           </div>
 
           <div class="hero-visual">
-  <img src="priv_hero.svg" alt="Hero Animation" class="hero-animation-img" />
-</div>
-
+            <img src="priv_hero.svg" alt="Prividium hero illustration" class="hero-animation-img" />
           </div>
         </section>
       </div> <!-- end .hero-wrapper -->
@@ -160,105 +159,61 @@
 
         </div>
       </section>
-    </main>
-
-
-  <!-- NARRATIVE SECTION -->
-<section class="narrative">
-  <div class="narrative-inner">
-
-    <p class="narrative-line">
-      Institutions see the potential of blockchain
-    </p>
-
-    <p class="narrative-line">
-      automation, transparency, and programmability that can transform how finance moves.
-    </p>
-
-    <p class="narrative-line">
-      But the very things that make blockchain open and powerful also make it impractical for enterprise use.
-    </p>
-
-    <p class="narrative-line">
-      Public chains expose sensitive data. Private chains isolate systems and lose network trust.
-      The tradeoff between innovation and control has stalled progress.
-    </p>
-
-    <p class="narrative-line">
-      Prividium removes that tradeoff.
-    </p>
-
-    <p class="narrative-line">
-      It’s how institutions modernize their infrastructure. No more sacrificing on privacy,
-      compliance, or trust.
-    </p>
-
-  </div>
-</section>
-
-
-
 
     </main>
 
-  </div>
+  </div> <!-- /.page -->
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const section = document.querySelector(".narrative");
-    const lines = Array.from(document.querySelectorAll(".narrative-line"));
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const section = document.querySelector(".narrative");
+      const lines = Array.from(document.querySelectorAll(".narrative-line"));
 
-    if (!section || lines.length === 0) return;
+      if (!section || lines.length === 0) return;
 
-    function easeInOut(t) {
-      // smooth easing: 0→1→0 curve
-      return t * t * (3 - 2 * t);
-    }
+      function easeInOut(t) {
+        return t * t * (3 - 2 * t);
+      }
 
-    function updateNarrative() {
-      const rect = section.getBoundingClientRect();
-      const vh = window.innerHeight;
+      function updateNarrative() {
+        const rect = section.getBoundingClientRect();
+        const vh = window.innerHeight;
 
-      // If section is completely off-screen, nothing to do
-      if (rect.bottom < 0 || rect.top > vh) return;
+        if (rect.bottom < 0 || rect.top > vh) return;
 
-      // Progress of the viewport center through the section: 0 → 1
-      const centerY = vh * 0.5;
-      let progress = (centerY - rect.top) / rect.height;
-      progress = Math.max(0, Math.min(0.999, progress));
+        const centerY = vh * 0.5;
+        let progress = (centerY - rect.top) / rect.height;
+        progress = Math.max(0, Math.min(0.999, progress));
 
-      const count = lines.length;
-      const segment = 1 / count;
+        const count = lines.length;
+        const segment = 1 / count;
 
-      lines.forEach((line, index) => {
-        const start = segment * index;
-        const end = segment * (index + 1);
-        let local = (progress - start) / (end - start);
+        lines.forEach((line, index) => {
+          const start = segment * index;
+          const end = segment * (index + 1);
+          let local = (progress - start) / (end - start);
 
-        if (local <= 0) {
-          // not reached yet: hidden, below
-          line.style.opacity = 0;
-          line.style.transform = "translateY(40px)";
-        } else if (local >= 1) {
-          // fully arrived: locked in place, full opacity
-          line.style.opacity = 1;
-          line.style.transform = "translateY(0)";
-        } else {
-          // in transition: slide from 40px → 0, opacity 0 → 1
-          const t = easeInOut(local);
-          const y = 40 * (1 - t); // 40 → 0
-          line.style.opacity = t;
-          line.style.transform = `translateY(${y}px)`;
-        }
-      });
-    }
+          if (local <= 0) {
+            line.style.opacity = 0;
+            line.style.transform = "translateY(40px)";
+          } else if (local >= 1) {
+            line.style.opacity = 1;
+            line.style.transform = "translateY(0)";
+          } else {
+            const t = easeInOut(local);
+            const y = 40 * (1 - t);
+            line.style.opacity = t;
+            line.style.transform = `translateY(${y}px)`;
+          }
+        });
+      }
 
-    updateNarrative();
-    window.addEventListener("scroll", updateNarrative, { passive: true });
-    window.addEventListener("resize", updateNarrative);
-  });
-</script>
-
-
+      updateNarrative();
+      window.addEventListener("scroll", updateNarrative, { passive: true });
+      window.addEventListener("resize", updateNarrative);
+    });
+  </script>
 </body>
+</html>
+
 </html>
