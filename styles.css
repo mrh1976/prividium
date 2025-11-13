@@ -458,6 +458,19 @@ body {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+
+  /* start hidden / slightly moved down */
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s ease-out;
+}
+
+/* visible state when scrolled into view */
+.narrative-line.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Gradient text similar to Figma */
