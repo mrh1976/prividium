@@ -434,60 +434,51 @@ body {
 
 .narrative {
   max-width: 1280px;
-  margin: 160px auto 200px;
+  margin: 180px auto 220px;
   padding: 0 80px;
   position: relative;
-  min-height: 200vh; /* enough scroll room to step through all lines */
+
+  /* Tall so we have room to “walk” through the story */
+  min-height: 260vh;
 }
 
 .narrative-inner {
   position: sticky;
-  top: 20vh;          /* pin around top third of viewport */
+  top: 20vh;          /* pins the text in the upper third of the screen */
   text-align: center;
 }
 
-/* Every line is big & bold */
+/* Every line: same big, dramatic style */
 .narrative-line {
   font-size: 48px;
   font-weight: 700;
-  line-height: 1.25;
-  margin: 0 auto 24px;
+  line-height: 1.3;
+  margin: 0 auto 28px;
   max-width: 900px;
   color: #050B5A;
-}
 
-/* Base: hidden & slightly lowered */
-.narrative-item {
+  /* starting state; JS overrides these via inline style */
   opacity: 0;
-  transform: translateY(24px);
-  transition:
-    opacity 0.4s ease-out,
-    transform 0.4s ease-out;
-}
-
-/* Once activated, full opacity, locked in place */
-.narrative-item.is-active {
-  opacity: 1;
-  transform: translateY(0);
+  transform: translateY(40px);
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
   .narrative {
     padding: 0 24px;
-    margin: 120px auto 160px;
-    min-height: 180vh;
+    margin: 140px auto 180px;
+    min-height: 220vh;
   }
 
   .narrative-line {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 34px;
+    margin-bottom: 24px;
   }
 }
 
 @media (max-width: 640px) {
   .narrative {
-    min-height: 170vh;
+    min-height: 200vh;
   }
 
   .narrative-line {
