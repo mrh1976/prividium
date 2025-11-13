@@ -11,7 +11,6 @@
 
   --accent: #070ea0;
   --accent-soft: rgba(7, 14, 160, 0.08);
-  --border-soft: rgba(10, 13, 18, 0.08);
 
   --surface: #ffffff;
   --surface-soft: #f2f4fb;
@@ -19,10 +18,10 @@
   --radius-lg: 24px;
   --radius-md: 18px;
 
-  --shadow-soft: 0 12px 40px rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 16px 40px rgba(15, 23, 42, 0.08);
 }
 
-/* Global reset-ish */
+/* RESET / GLOBAL ---------------------------------------------------------- */
 
 *,
 *::before,
@@ -45,16 +44,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-.page {
-  min-height: 100vh;
-}
-
-/* Layout utility */
-
-main {
-  display: block;
-}
-
 /* Global image safety – no overflowing SVGs */
 img {
   max-width: 100%;
@@ -62,8 +51,15 @@ img {
   display: block;
 }
 
+.page {
+  min-height: 100vh;
+}
 
-/* NAVBAR */
+main {
+  display: block;
+}
+
+/* NAVBAR ------------------------------------------------------------------ */
 
 .nav {
   backdrop-filter: blur(24px);
@@ -94,7 +90,6 @@ img {
 
 .nav-logo-img {
   height: 28px;
-  display: block;
 }
 
 .nav-links {
@@ -126,7 +121,7 @@ img {
   align-items: center;
 }
 
-/* Buttons */
+/* BUTTONS ----------------------------------------------------------------- */
 
 .btn {
   position: relative;
@@ -172,8 +167,7 @@ img {
   min-width: 130px;
 }
 
-/* Button light flares */
-
+/* Button flares */
 .btn-bg-corner {
   pointer-events: none;
   position: absolute;
@@ -211,7 +205,7 @@ img {
   box-shadow: inset 0 0 0 1px rgba(7, 14, 160, 0.35);
 }
 
-/* HERO */
+/* HERO -------------------------------------------------------------------- */
 
 .hero-wrapper {
   background: linear-gradient(
@@ -276,8 +270,6 @@ img {
   gap: 20px;
 }
 
-/* HERO VISUAL */
-
 .hero-visual {
   display: flex;
   align-items: center;
@@ -287,11 +279,9 @@ img {
 .hero-animation-img {
   width: 100%;
   max-width: 520px;
-  height: auto;
-  display: block;
 }
 
-/* SELECTED OBSERVERS */
+/* SELECTED OBSERVERS ------------------------------------------------------ */
 
 .observers {
   max-width: 1280px;
@@ -335,14 +325,10 @@ img {
 
 .observer-logo img {
   max-height: 40px;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-  display: block;
   filter: grayscale(15%);
 }
 
-/* NARRATIVE SCROLL */
+/* NARRATIVE SCROLL -------------------------------------------------------- */
 
 .narrative {
   max-width: 1100px;
@@ -370,436 +356,7 @@ img {
   transform: translateY(40px);
 }
 
-/* =========================================================
-   GENERIC SECTION WRAPPER (below narrative)
-========================================================= */
-
-.section {
-  padding: 96px 80px;
-  background: #f5f7fb;
-}
-
-.section--alt {
-  background: #f0f3fa;
-}
-
-.section-inner {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.section-eyebrow {
-  font-size: 13px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #5c6bf5;
-  margin: 0 0 12px;
-}
-
-.section-title {
-  font-size: 36px;
-  line-height: 1.25;
-  font-weight: 700;
-  color: #11141a;
-  margin: 0 0 12px;
-}
-
-.section-lead {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #636b7b;
-  margin: 0 0 32px;
-}
-
-/* =========================================================
-   ABOUT PRIVIDIUM – TWO BIG PANELS
-========================================================= */
-
-.section-about {
-  background: #f5f7fb;
-}
-
-.about-panels {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 24px;
-  margin-top: 24px;
-}
-
-.about-panel {
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 32px 32px 28px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;           /* keeps tall SVGs inside */
-}
-
-.about-illustration-wrapper {
-  padding: 8px 0 20px;
-}
-
-.about-illustration {
-  width: 100%;
-  height: auto;
-}
-
-.about-panel-title {
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0 0 8px;
-  color: #11141a;
-}
-
-.about-panel-body {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #636b7b;
-  margin: 0;
-}
-
-/* little four-diamond icon that sits under left panel */
-.about-floating-icon {
-  margin-top: 20px;
-  width: 80px;
-}
-
-/* =========================================================
-   CORE PILLARS – 4 SMALL CARDS (privacy, compliance, etc.)
-========================================================= */
-
-.about-pillars {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.about-pillar {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 18px 18px 16px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.about-pillar-icon {
-  width: 40px;
-  height: 40px;
-}
-
-.about-pillar-title {
-  font-size: 14px;
-  font-weight: 600;
-  margin: 0;
-  color: #11141a;
-}
-
-.about-pillar-body {
-  font-size: 13px;
-  line-height: 1.6;
-  color: #636b7b;
-  margin: 0;
-}
-
-/* =========================================================
-   USE CASES
-========================================================= */
-
-.section-usecases {
-  background: #f5f7fb;
-}
-
-.usecases-card {
-  background: #ffffff;
-  border-radius: 28px;
-  padding: 40px 40px 36px;
-  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.04);
-}
-
-.usecases-header {
-  max-width: 720px;
-  margin-bottom: 32px;
-}
-
-.usecases-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.usecase {
-  background: #f9fbff;
-  border-radius: 22px;
-  padding: 28px 28px 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.usecase-illustration-wrapper {
-  padding-bottom: 10px;
-}
-
-.usecase-illustration {
-  width: 100%;
-}
-
-.usecase-title {
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0 0 4px;
-}
-
-.usecase-body {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #636b7b;
-  margin: 0;
-}
-
-/* bottom-left decorative icon in this section */
-.usecases-floating-icon {
-  margin-top: 24px;
-  width: 78px;
-}
-
-/* =========================================================
-   “CONNECT WITHOUT TRADEOFFS” – COMPARISON & HIGHLIGHT
-========================================================= */
-
-.section-comparison {
-  background: #eef2fb;
-}
-
-.comparison-layout {
-  display: grid;
-  grid-template-columns: 1.1fr 1.1fr 1.1fr;
-  gap: 24px;
-  margin-top: 32px;
-  align-items: flex-start;
-}
-
-/* left: table */
-.comparison-table-card {
-  background: #ffffff;
-  border-radius: 24px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
-  overflow: hidden;
-}
-
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-}
-
-.comparison-table th,
-.comparison-table td {
-  padding: 14px 18px;
-}
-
-.comparison-table thead th {
-  background: #f4f5ff;
-  font-weight: 600;
-  text-align: left;
-  font-size: 13px;
-  color: #6b7280;
-}
-
-.comparison-table thead th:nth-child(2) {
-  background: linear-gradient(135deg, #8fb3ff, #4c7bff);
-  color: #ffffff;
-}
-
-.comparison-table tbody tr:nth-child(odd) td {
-  background: #fafbff;
-}
-
-/* middle and right highlight cards */
-.comparison-highlight {
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 24px 24px 22px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.comparison-highlight-illustration {
-  max-width: 180px;
-}
-
-.comparison-highlight-title {
-  font-size: 16px;
-  font-weight: 600;
-  margin: 0;
-}
-
-.comparison-highlight-body {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #636b7b;
-  margin: 0;
-}
-
-/* =========================================================
-   WHY ENTERPRISES MOVE TO PRIVIDIUM – FAQ + CASES
-========================================================= */
-
-.section-why {
-  background: #f5f7fb;
-}
-
-.why-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: 40px;
-  margin-top: 32px;
-}
-
-/* Left: FAQ list / questions */
-.why-faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.why-faq-item {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 18px 18px 14px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
-}
-
-.why-faq-q {
-  font-size: 14px;
-  font-weight: 600;
-  margin: 0 0 6px;
-}
-
-.why-faq-a {
-  font-size: 13px;
-  line-height: 1.65;
-  color: #636b7b;
-  margin: 0;
-}
-
-/* Right: research cards column */
-.why-research {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.research-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 16px 18px;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 14px;
-  align-items: center;
-}
-
-.research-cover {
-  width: 70px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.research-body-title {
-  font-size: 14px;
-  font-weight: 600;
-  margin: 0 0 4px;
-}
-
-.research-body-link {
-  font-size: 13px;
-  color: #4456ff;
-  text-decoration: none;
-}
-
-/* =========================================================
-   TESTIMONIAL + GRADIENT CTA
-========================================================= */
-
-.section-testimonial {
-  background: #f5f7fb;
-}
-
-.testimonial-card {
-  background: #ffffff;
-  border-radius: 28px;
-  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
-  padding: 32px 32px 0;
-}
-
-.testimonial-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.4fr) auto;
-  gap: 32px;
-  align-items: center;
-}
-
-.testimonial-quote {
-  font-size: 26px;
-  line-height: 1.5;
-  font-weight: 500;
-  margin: 0 0 24px;
-  color: #11141a;
-}
-
-.testimonial-meta {
-  font-size: 13px;
-  color: #4b5563;
-}
-
-.testimonial-photo {
-  width: 220px;
-  border-radius: 18px;
-  overflow: hidden;
-}
-
-/* gradient bar at bottom of testimonial */
-.testimonial-cta {
-  margin-top: 24px;
-  padding: 18px 24px 20px;
-  border-radius: 0 0 28px 28px;
-  background: linear-gradient(90deg, #4f46e5, #2563eb);
-  color: #ffffff;
-}
-
-.testimonial-cta-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0 0 6px;
-}
-
-.testimonial-cta-body {
-  font-size: 14px;
-  margin: 0;
-}
-
-/* =========================================================
-   CONTACT FORM
-========================================================= */
-
-.section-contact {
-  background: #f5f7fb;
-}
-
-.contact-layout {
-  display: g
-
-
-/* GENERIC SECTION TYPOGRAPHY */
+/* GENERIC SECTION TYPOGRAPHY --------------------------------------------- */
 
 .section-eyebrow {
   font-family: "Space Grotesk", system-ui, sans-serif;
@@ -827,7 +384,7 @@ img {
   margin: 0;
 }
 
-/* PILLARS SECTION */
+/* PILLARS ----------------------------------------------------------------- */
 
 .pillars {
   max-width: 1280px;
@@ -872,7 +429,6 @@ img {
 .pillar-icon {
   width: 32px;
   height: 32px;
-  display: block;
 }
 
 .pillar-title {
@@ -892,10 +448,9 @@ img {
 
 .pillars-visual img {
   width: 100%;
-  display: block;
 }
 
-/* USE CASES */
+/* USE CASES --------------------------------------------------------------- */
 
 .usecases {
   max-width: 1280px;
@@ -931,7 +486,6 @@ img {
 .usecase-icon {
   width: 32px;
   height: 32px;
-  display: block;
 }
 
 .usecase-title {
@@ -949,7 +503,7 @@ img {
   color: var(--text-muted);
 }
 
-/* MARKETS */
+/* MARKETS ----------------------------------------------------------------- */
 
 .markets {
   max-width: 1280px;
@@ -1014,10 +568,9 @@ img {
 
 .markets-visual img {
   width: 100%;
-  display: block;
 }
 
-/* WHY SECTION */
+/* WHY SECTION ------------------------------------------------------------- */
 
 .why {
   max-width: 1280px;
@@ -1072,7 +625,7 @@ img {
   color: var(--text-muted);
 }
 
-/* CTA */
+/* CTA --------------------------------------------------------------------- */
 
 .cta {
   max-width: 1280px;
@@ -1122,7 +675,7 @@ img {
   gap: 16px;
 }
 
-/* CONTACT STRIP */
+/* CONTACT STRIP ----------------------------------------------------------- */
 
 .contact-strip {
   max-width: 1280px;
@@ -1155,12 +708,7 @@ img {
   color: var(--text-muted);
 }
 
-.contact-visual img {
-  width: 100%;
-  display: block;
-}
-
-/* FAQ */
+/* FAQ --------------------------------------------------------------------- */
 
 .faq {
   max-width: 1280px;
@@ -1183,244 +731,4 @@ img {
 .faq-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-  gap: 32px;
-  align-items: flex-start;
-}
-
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.faq-item {
-  border-radius: 16px;
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  padding: 14px 14px 16px;
-  background: #f7f8ff;
-}
-
-.faq-item h3 {
-  font-size: 15px;
-  font-weight: 600;
-  margin: 0 0 6px;
-  color: var(--text-heading);
-}
-
-.faq-item p {
-  font-size: 14px;
-  line-height: 1.7;
-  margin: 0;
-  color: var(--text-muted);
-}
-
-.faq-visual img {
-  width: 100%;
-  display: block;
-}
-
-/* FOOTER */
-
-.footer {
-  border-top: 1px solid rgba(148, 163, 184, 0.35);
-  padding: 32px 80px 20px;
-  background: #02010f;
-  color: #e5e7eb;
-}
-
-.footer-inner {
-  max-width: 1280px;
-  margin: 0 auto 20px;
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.footer-brand {
-  max-width: 420px;
-}
-
-.footer-logo {
-  height: 22px;
-  margin-bottom: 10px;
-}
-
-.footer-tagline {
-  font-size: 13px;
-  line-height: 1.7;
-  margin: 0;
-  color: #9ca3af;
-}
-
-.footer-columns {
-  display: flex;
-  gap: 40px;
-}
-
-.footer-col h4 {
-  font-size: 14px;
-  font-weight: 600;
-  margin: 0 0 8px;
-}
-
-.footer-col a {
-  display: block;
-  font-size: 13px;
-  color: #d1d5db;
-  text-decoration: none;
-  margin-bottom: 4px;
-}
-
-.footer-col a:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  max-width: 1280px;
-  margin: 0 auto;
-  font-size: 12px;
-  color: #6b7280;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 1024px) {
-  .nav {
-    padding: 0 24px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .hero {
-    padding: 56px 24px 80px;
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .hero-content {
-    max-width: none;
-  }
-
-  .hero-visual {
-    max-width: 440px;
-    margin: 0 auto;
-  }
-
-  .observers,
-  .narrative,
-  .pillars,
-  .usecases,
-  .markets,
-  .why,
-  .cta,
-  .contact-strip,
-  .faq {
-    padding: 0 24px;
-  }
-
-  .pillars-inner,
-  .markets-inner,
-  .why-inner,
-  .faq-inner {
-    padding: 28px 24px;
-  }
-
-  .pillars-layout,
-  .markets-layout,
-  .contact-inner,
-  .faq-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .pillars-visual,
-  .markets-visual,
-  .faq-visual {
-    margin-top: 18px;
-  }
-
-  .usecases-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .narrative {
-    min-height: 220vh;
-    margin: 140px auto 180px;
-  }
-
-  .narrative-line {
-    font-size: 32px;
-  }
-
-  .footer {
-    padding: 28px 24px 18px;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero {
-    padding-top: 40px;
-  }
-
-  .hero-title {
-    font-size: 38px;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-  }
-
-  .btn,
-  .btn-nav {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .observers-card {
-    padding: 24px 18px;
-  }
-
-  .observers-row {
-    flex-wrap: wrap;
-  }
-
-  .observer-logo {
-    flex: 1 1 40%;
-  }
-
-  .usecases-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .markets-grid,
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .contact-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .narrative {
-    min-height: 200vh;
-  }
-
-  .narrative-line {
-    font-size: 24px;
-  }
-
-  .footer-columns {
-    flex-direction: column;
-    gap: 16px;
-  }
-}
+  ga
