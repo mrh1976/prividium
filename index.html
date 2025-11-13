@@ -163,5 +163,36 @@
     </main>
 
   </div>
+  <script>
+    // Reveal narrative lines on scroll
+    document.addEventListener("DOMContentLoaded", function () {
+      const lines = document.querySelectorAll(".narrative-line");
+
+      if (!("IntersectionObserver" in window) || lines.length === 0) {
+        // Fallback: just show them if observer not supported
+        lines.forEach((line) => line.classList.add("is-visible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              obs.unobserve(entry.target); // only animate once
+            }
+          });
+        },
+        {
+          threshold: 0.3, // ~30% of the line visible
+        }
+      );
+
+      lines.forEach((line) => observer.observe(line));
+    });
+  </script>
+</body>
+</html>
+
 </body>
 </html>
