@@ -182,15 +182,12 @@ body {
 .hero-wrapper {
   background: linear-gradient(
     180deg,
-    #d4e6ff 0%,   /* richer blue near the top */
-    #e4f0ff 45%,  /* mid fade */
-    #f7f9fc 100%  /* same as page background at the bottom */
+    #d4e6ff 0%,
+    #e4f0ff 45%,
+    var(--bg-page) 100%
   );
 }
 
-.hero-wrapper {
-  position: relative;
-}
 
 .hero {
   max-width: 1280px;
