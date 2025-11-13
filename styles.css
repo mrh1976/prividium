@@ -56,12 +56,10 @@ body {
   text-decoration: none;
 }
 
-.nav-logo-mark {
-  width: 32px;
+.nav-logo-img {
   height: 32px;
-  border-radius: 999px;
-  background: radial-gradient(circle at 30% 30%, #7f8cff, #070ea0);
 }
+
 
 .nav-logo-text {
   font-size: 18px;
