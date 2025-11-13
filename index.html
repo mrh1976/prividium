@@ -5,10 +5,13 @@
   <title>ZKsync Prividium – Execute Privately, Verify Publicly</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Inter font -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -19,8 +22,7 @@
     <header class="nav">
       <div class="nav-left">
         <a href="#" class="nav-logo">
-          <!-- Main zkSync logo -->
-          <img src="zksync-logo.svg" alt="zkSync Logo" class="nav-logo-img" />
+          <img src="assets/zksync-logo.svg" alt="zkSync Logo" class="nav-logo-img" />
         </a>
 
         <nav class="nav-links">
@@ -89,555 +91,363 @@
           </div>
 
           <div class="hero-visual">
-            <!-- Hero illustration (black circles animation) -->
             <img
-              src="priv_hero.svg"
+              src="assets/priv_hero.svg"
               alt="Prividium hero illustration"
               class="hero-animation-img"
             />
           </div>
         </section>
-      </div> <!-- /.hero-wrapper -->
+      </div>
 
-      <!-- SELECTED OBSERVERS (LOGO STRIP) -->
+      <!-- SELECTED OBSERVERS -->
       <section class="observers">
         <p class="observers-eyebrow">Select Observers</p>
 
         <div class="observers-card">
           <div class="observers-row">
             <div class="observer-logo">
-              <img src="logo-deutsche-bank.svg" alt="Deutsche Bank" />
+              <img src="https://www.figma.com/api/mcp/asset/e13763b2-c657-4b04-8e34-237655ccf195" alt="Deutsche Bank" />
             </div>
             <div class="observer-logo">
-              <img src="logo-us-bank.svg" alt="US Bank" />
+              <img src="https://www.figma.com/api/mcp/asset/95db751e-0fab-4bb6-bb40-3b88dcdc8895" alt="US Bank" />
             </div>
             <div class="observer-logo">
-              <img src="logo-state-street.svg" alt="State Street" />
+              <img src="https://www.figma.com/api/mcp/asset/31c83858-c227-4006-93af-e19c03f67d2a" alt="State Street" />
             </div>
             <div class="observer-logo">
-              <img src="logo-uob.svg" alt="UOB" />
+              <img src="https://www.figma.com/api/mcp/asset/72ab91b7-4b95-4449-92ea-8776134bf8c9" alt="UOB" />
             </div>
           </div>
 
           <div class="observers-row">
             <div class="observer-logo">
-              <img src="logo-fidelity-international.svg" alt="Fidelity International" />
+              <img src="https://www.figma.com/api/mcp/asset/ac8c38ec-ce0b-4ade-9b04-5167da5db947" alt="Fidelity International" />
             </div>
             <div class="observer-logo">
-              <img src="logo-banco-santander.svg" alt="Banco Santander" />
+              <img src="https://www.figma.com/api/mcp/asset/48a43ef0-bedc-4035-beda-36b7461d6e6a" alt="Banco Santander" />
             </div>
             <div class="observer-logo">
-              <img src="logo-generic-observer.svg" alt="Observer logo" />
+              <img src="https://www.figma.com/api/mcp/asset/34e85a32-9851-4045-8c53-e64a8e1cf9b3" alt="Observer logo" />
             </div>
           </div>
         </div>
       </section>
 
-      <!-- NARRATIVE SECTION (SCROLL-DRIVEN) -->
+      <!-- NARRATIVE SCROLL SECTION -->
       <section class="narrative">
         <div class="narrative-inner">
-
-          <p class="narrative-line">
-            Institutions see the potential of blockchain
-          </p>
-
-          <p class="narrative-line">
-            automation, transparency, and programmability that can transform how finance moves.
-          </p>
-
-          <p class="narrative-line">
-            But the very things that make blockchain open and powerful also make it impractical for enterprise use.
-          </p>
-
-          <p class="narrative-line">
-            Public chains expose sensitive data. Private chains isolate systems and lose network trust.
-            The tradeoff between innovation and control has stalled progress.
-          </p>
-
-          <p class="narrative-line">
-            Prividium removes that tradeoff.
-          </p>
-
-          <p class="narrative-line">
-            It’s how institutions modernize their infrastructure. No more sacrificing on privacy,
-            compliance, or trust.
-          </p>
-
+          <p class="narrative-line">Institutions see the potential of blockchain</p>
+          <p class="narrative-line">automation, transparency, and programmability that can transform how finance moves.</p>
+          <p class="narrative-line">But the very things that make blockchain open and powerful also make it impractical for enterprise use.</p>
+          <p class="narrative-line">Public chains expose sensitive data. Private chains isolate systems and lose network trust.</p>
+          <p class="narrative-line">Prividium removes that tradeoff.</p>
+          <p class="narrative-line">It’s how institutions modernize their infrastructure.</p>
         </div>
       </section>
 
-      <!-- USE CASES SECTION -->
+      <!-- PILLARS / ABOUT PRIVIDIUM -->
+      <section class="pillars">
+        <div class="pillars-inner">
+          <div class="pillars-copy">
+            <p class="section-eyebrow">About Prividium</p>
+            <h2 class="section-title">
+              A full ZK-based blockchain that keeps data private within your infrastructure.
+            </h2>
+            <p class="section-intro">
+              Prividium combines privacy, compliance, control, and interoperability, designed for
+              the demands of regulated institutions and global markets.
+            </p>
+          </div>
+
+          <div class="pillars-layout">
+            <div class="pillars-grid">
+              <article class="pillar-card">
+                <img
+                  src="assets/about-privacy.svg fill.svg"
+                  alt="Privacy icon"
+                  class="pillar-icon"
+                />
+                <h3 class="pillar-title">Privacy with public proofs</h3>
+                <p class="pillar-body">
+                  Transactions, balances, and counterparties stay confidential while proofs of
+                  state changes are public and independently verifiable.
+                </p>
+              </article>
+
+              <article class="pillar-card">
+                <img
+                  src="assets/about-compliance.svg fill.svg"
+                  alt="Compliance icon"
+                  class="pillar-icon"
+                />
+                <h3 class="pillar-title">Built-in compliance</h3>
+                <p class="pillar-body">
+                  Role-based access, policy enforcement, and selective disclosure give
+                  compliance teams verifiable control without exposing full ledgers.
+                </p>
+              </article>
+
+              <article class="pillar-card">
+                <img
+                  src="assets/about-enterprise-control.svg fill.svg"
+                  alt="Enterprise control icon"
+                  class="pillar-icon"
+                />
+                <h3 class="pillar-title">Enterprise control at scale</h3>
+                <p class="pillar-body">
+                  Operators define governance, transaction ordering, and gas policies, with the
+                  option to run multiple Prividium instances in parallel.
+                </p>
+              </article>
+
+              <article class="pillar-card">
+                <img
+                  src="assets/about-direct-connectivity.svg fill.svg"
+                  alt="Direct connectivity icon"
+                  class="pillar-icon"
+                />
+                <h3 class="pillar-title">Direct connectivity</h3>
+                <p class="pillar-body">
+                  Native connectivity to Ethereum and the ZKsync ecosystem enables seamless
+                  asset and data flows without complex bridging layers.
+                </p>
+              </article>
+            </div>
+
+            <!-- Side illustration -->
+            <div class="pillars-visual">
+              <img
+                src="assets/illustration.svg"
+                alt="Prividium architecture illustration"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- USE CASES -->
       <section class="usecases">
         <div class="usecases-inner">
           <header class="usecases-header">
-            <p class="usecases-eyebrow">Prividium enables new use cases</p>
-            <h2 class="usecases-title">
+            <p class="section-eyebrow">Prividium enables new use cases</p>
+            <h2 class="section-title">
               Private execution with public trust,<br />
               built for institutional workflows.
             </h2>
-            <p class="usecases-intro">
+            <p class="section-intro">
               From intraday liquidity to cross-entity workflows, Prividium lets institutions
-              modernize core operations without giving up privacy, compliance, or control.
+              modernize core operations without giving up privacy or compliance.
             </p>
           </header>
 
           <div class="usecases-grid">
             <article class="usecase-card">
-              <img
-                src="icon-usecase-intraday.svg"
-                alt="Intraday settlement icon"
-                style="width:32px;height:auto;margin-bottom:12px;"
-              />
+              <img src="assets/illustration-1.svg" alt="" class="usecase-icon" />
               <h3 class="usecase-title">Real-time intraday settlement</h3>
               <p class="usecase-body">
                 Move collateral, cash, and positions instantly instead of waiting on batch
-                windows and T+1 rails. Treasury and trading teams see finality in minutes,
-                while underlying data stays private inside your infrastructure.
+                windows and T+1 rails.
               </p>
             </article>
 
             <article class="usecase-card">
-              <img
-                src="icon-usecase-workflows.svg"
-                alt="Workflow icon"
-                style="width:32px;height:auto;margin-bottom:12px;"
-              />
+              <img src="assets/illustration-2.svg" alt="" class="usecase-icon" />
               <h3 class="usecase-title">Cross-entity workflows</h3>
               <p class="usecase-body">
                 Coordinate across legal entities, desks, or partners on a single shared
-                ledger. Each party sees only what they are entitled to, while ZK proofs
-                certify that every step executed correctly.
+                ledger with controlled visibility.
               </p>
             </article>
 
             <article class="usecase-card">
-              <img
-                src="icon-usecase-compliance.svg"
-                alt="Compliance icon"
-                style="width:32px;height:auto;margin-bottom:12px;"
-              />
+              <img src="assets/illustration-3.svg" alt="" class="usecase-icon" />
               <h3 class="usecase-title">Compliance-aware automation</h3>
               <p class="usecase-body">
-                Bake KYC, limits, and approvals directly into onchain logic. Role-based
-                permissions and selective disclosure let compliance teams validate behavior
-                without exposing confidential flows or counterparties.
+                Bake KYC, limits, and approvals directly into onchain logic with audit-ready trails.
               </p>
             </article>
 
             <article class="usecase-card">
-              <img
-                src="icon-usecase-tokenized.svg"
-                alt="Tokenized markets icon"
-                style="width:32px;height:auto;margin-bottom:12px;"
-              />
+              <img src="assets/image 28.svg" alt="" class="usecase-icon" />
               <h3 class="usecase-title">Tokenized markets with control</h3>
               <p class="usecase-body">
                 Issue and manage tokenized assets, run auctions, or operate private markets
-                with Ethereum-grade security. Market structure can evolve, but the rules of
-                the system remain transparent and verifiable.
+                with Ethereum-grade security.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- GLOBAL MARKETS SECTION -->
+      <!-- MARKETS SECTION -->
       <section class="markets">
-        <div class="markets-header">
-          <p class="section-eyebrow">Global markets are moving onchain</p>
-          <h2 class="section-title">
-            Connect without tradeoffs.
-          </h2>
-          <p class="section-intro">
-            Prividium lets institutions tap into global liquidity while keeping sensitive flows,
-            positions, and counterparties under strict control.
-          </p>
-        </div>
-
-        <div class="markets-grid">
-          <article class="markets-card">
-            <img
-              src="icon-markets-visibility.svg"
-              alt="Visibility icon"
-              style="width:30px;height:auto;margin-bottom:10px;"
-            />
-            <h3 class="markets-card-title">Privacy with operator visibility</h3>
-            <p class="markets-card-body">
-              Users transact privately, while operators retain the line of sight they need
-              for risk, reporting, and supervision.
+        <div class="markets-inner">
+          <div class="markets-header">
+            <p class="section-eyebrow">Global markets are moving onchain</p>
+            <h2 class="section-title">Connect without tradeoffs.</h2>
+            <p class="section-intro">
+              Tap into global liquidity while keeping sensitive flows, positions, and
+              counterparties under strict control.
             </p>
-          </article>
+          </div>
 
-          <article class="markets-card">
-            <img
-              src="icon-markets-access.svg"
-              alt="Direct access icon"
-              style="width:30px;height:auto;margin-bottom:10px;"
-            />
-            <h3 class="markets-card-title">Direct market access</h3>
-            <p class="markets-card-body">
-              Connect directly to Ethereum and the ZKsync ecosystem instead of routing
-              through layers of intermediaries and bespoke rails.
-            </p>
-          </article>
+          <div class="markets-layout">
+            <div class="markets-grid">
+              <article class="markets-card">
+                <img src="assets/Group 61.svg" alt="" class="markets-icon" />
+                <h3 class="markets-card-title">Privacy with operator visibility</h3>
+                <p class="markets-card-body">
+                  Users transact privately, while operators retain the line of sight they
+                  need for risk, reporting, and supervision.
+                </p>
+              </article>
 
-          <article class="markets-card">
-            <img
-              src="icon-markets-risk.svg"
-              alt="Risk icon"
-              style="width:30px;height:auto;margin-bottom:10px;"
-            />
-            <h3 class="markets-card-title">Reduced third-party risk</h3>
-            <p class="markets-card-body">
-              Run your own chain while using ZK proofs and Ethereum anchoring to minimize
-              reliance on external infrastructure providers.
-            </p>
-          </article>
+              <article class="markets-card">
+                <img src="assets/Group 63.svg" alt="" class="markets-icon" />
+                <h3 class="markets-card-title">Direct market access</h3>
+                <p class="markets-card-body">
+                  Connect directly to Ethereum and the ZKsync ecosystem instead of routing
+                  through layers of intermediaries and bespoke rails.
+                </p>
+              </article>
+
+              <article class="markets-card">
+                <img src="assets/illustration-2.svg" alt="" class="markets-icon" />
+                <h3 class="markets-card-title">Reduced third-party risk</h3>
+                <p class="markets-card-body">
+                  Run your own chain while using ZK proofs and Ethereum anchoring to
+                  minimize reliance on external infrastructure providers.
+                </p>
+              </article>
+            </div>
+
+            <div class="markets-visual">
+              <img src="assets/illustration-3.svg" alt="Onchain markets illustration" />
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- PRIVIDIUM DIFFERENCE SECTION -->
-      <section class="difference">
-        <div class="difference-header">
-          <p class="section-eyebrow">The Prividium difference</p>
-          <h2 class="section-title">
-            Private execution. Public verifiability.
-          </h2>
-          <p class="section-intro">
-            A full ZK blockchain architecture that keeps data private in your environment
-            while proofs of correctness are anchored to Ethereum.
-          </p>
-        </div>
-
-        <div class="difference-grid">
-          <article class="difference-card">
-            <img
-              src="icon-diff-private-txs.svg"
-              alt="Private transactions icon"
-              style="width:28px;height:auto;margin-bottom:10px;"
-            />
-            <h3 class="difference-title">Transactions execute privately</h3>
-            <p class="difference-body">
-              All activity runs inside your own infrastructure. Sensitive data never needs
-              to leave your environment, reducing the surface for data leakage.
-            </p>
-          </article>
-
-          <article class="difference-card">
-            <img
-              src="icon-diff-disclosure.svg"
-              alt="Disclosure icon"
-              style="width:28px;height:auto;margin-bottom:10px;"
-            />
-            <h3 class="difference-title">Controlled disclosure</h3>
-            <p class="difference-body">
-              Share only what regulators, auditors, or partners are entitled to see, backed
-              by cryptographic guarantees instead of manual reporting.
-            </p>
-          </article>
-
-          <article class="difference-card">
-            <img
-              src="icon-diff-proofs.svg"
-              alt="ZK proofs icon"
-              style="width:28px;height:auto;margin-bottom:10px;"
-            />
-            <h3 class="difference-title">ZK proofs certify correctness</h3>
-            <p class="difference-body">
-              Each batch generates proofs that attest to correct execution. The math becomes
-              the trust layer, not a consortium agreement.
-            </p>
-          </article>
-
-          <article class="difference-card">
-            <img
-              src="icon-diff-ethereum.svg"
-              alt="Ethereum icon"
-              style="width:28px;height:auto;margin-bottom:10px;"
-            />
-            <h3 class="difference-title">Finality on Ethereum</h3>
-            <p class="difference-body">
-              Proofs are verified on Ethereum, inheriting its security and settlement assurances
-              while your chain keeps operations private.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <!-- PILLARS SECTION (PRIVACY / COMPLIANCE / CONTROL / CONNECTIVITY) -->
-      <section class="pillars">
-        <div class="pillars-header">
-          <h2 class="section-title">
-            Prividium is a full ZK-based blockchain that keeps data private within your infrastructure.
-          </h2>
-          <p class="section-intro">
-            Out of the box, it combines privacy, compliance, control, and interoperability designed
-            for regulated institutions.
-          </p>
-        </div>
-
-        <div class="pillars-grid">
-          <article class="pillar-card">
-            <img
-              src="icon-pillar-privacy.svg"
-              alt="Privacy icon"
-              style="width:30px;height:auto;margin-bottom:10px;"
-            />
-            <h3 class="pillar-title">Privacy with public proofs</h3>
-            <p class="pillar-body">
-              Transactions, balances, and counterparties stay confidential while proofs
-              of state changes are public and independently verifiable.
-            </p>
-          </article>
-
-          <article class="pillar-card">
-            <img
-              src="icon-pillar-compliance.svg"
-              alt="Compliance icon"
-              style="width:30px;height:auto;margin-bottom:10px;"
-            />
-            <h3 class="pillar-title">Built-in compliance</h3>
-            <p class="pillar-body">
-              Role-based access, policy enforcement, and selective disclosure give compliance
-              teams verifiable control without exposing full ledgers.
-            </p>
-          </article>
-
-          <article class="pillar-card">
-            <img
-              src="icon-pillar-control.svg"
-              alt="Control icon"
-              style="width:30px;height:auto;margin-bottom:10px;"
-            />
-            <h3 class="pillar-title">Enterprise control at scale</h3>
-            <p class="pillar-body">
-              Operators define governance, transaction ordering, and custom gas policies,
-              with the option to run multiple Prividium instances in parallel.
-            </p>
-          </article>
-
-          <article class="pillar-card">
-            <img
-              src="icon-pillar-connectivity.svg"
-              alt="Connectivity icon"
-              style="width:30px;height:auto;margin-bottom:10px;"
-            />
-            <h3 class="pillar-title">Direct connectivity</h3>
-            <p class="pillar-body">
-              Native connectivity to Ethereum and the ZKsync ecosystem enables seamless asset
-              and data flows without complex bridging layers.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <!-- WHY ENTERPRISES MOVE SECTION -->
+      <!-- WHY SECTION -->
       <section class="why">
-        <div class="why-header">
-          <p class="section-eyebrow">Why enterprises move to Prividium</p>
-          <h2 class="section-title">
-            From legacy ledgers and public chains to a fit-for-purpose infrastructure.
-          </h2>
-        </div>
+        <div class="why-inner">
+          <div class="why-header">
+            <p class="section-eyebrow">Why enterprises move to Prividium</p>
+            <h2 class="section-title">
+              From legacy ledgers and public chains to fit-for-purpose infrastructure.
+            </h2>
+          </div>
 
-        <div class="why-grid">
-          <article class="why-col">
-            <img
-              src="icon-why-ledgers.svg"
-              alt="Legacy ledger icon"
-              style="width:32px;height:auto;margin-bottom:10px;"
-            />
-            <h3 class="why-col-title">From permissioned ledgers</h3>
-            <p class="why-col-body">
-              Move beyond closed consortia and opaque governance. Keep privacy while
-              gaining independent verification, connectivity, and Ethereum-grade security.
-            </p>
-          </article>
+          <div class="why-grid">
+            <article class="why-card">
+              <img src="assets/Container.svg" alt="" class="why-icon" />
+              <h3 class="why-card-title">From permissioned ledgers</h3>
+              <p class="why-card-body">
+                Move beyond closed consortia and opaque governance. Keep privacy while gaining
+                independent verification, connectivity, and Ethereum-grade security.
+              </p>
+            </article>
 
-          <article class="why-col">
-            <img
-              src="icon-why-public.svg"
-              alt="Public chains icon"
-              style="width:32px;height:auto;margin-bottom:10px;"
-            />
-            <h3 class="why-col-title">From public chains</h3>
-            <p class="why-col-body">
-              Add privacy, policy enforcement, and controlled disclosure without sacrificing
-              access to liquidity or public settlement guarantees.
-            </p>
-          </article>
+            <article class="why-card">
+              <img src="assets/Container-1.svg" alt="" class="why-icon" />
+              <h3 class="why-card-title">From public chains</h3>
+              <p class="why-card-body">
+                Add privacy, policy enforcement, and controlled disclosure without sacrificing
+                access to liquidity or public settlement guarantees.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
-      <!-- RESEARCH & CASE STUDIES -->
-      <section class="research">
-        <div class="research-header">
-          <p class="section-eyebrow">Research &amp; case studies</p>
-          <h2 class="section-title">
-            Learn how institutions are already building with Prividium.
-          </h2>
-        </div>
-
-        <div class="research-grid">
-          <article class="research-card">
-            <img
-              src="icon-doc-whitepaper.svg"
-              alt="Whitepaper document icon"
-              style="width:24px;height:auto;margin-bottom:6px;"
-            />
-            <p class="research-tag">Whitepaper</p>
-            <h3 class="research-title">
-              Beyond public vs. private: a new institutional stack
-            </h3>
-            <p class="research-body">
-              How ZK-based architectures resolve long-standing tradeoffs between privacy,
-              verifiability, and connectivity.
-            </p>
-            <a href="#" class="research-link">Download</a>
-          </article>
-
-          <article class="research-card">
-            <img
-              src="icon-doc-casestudy.svg"
-              alt="Case study document icon"
-              style="width:24px;height:auto;margin-bottom:6px;"
-            />
-            <p class="research-tag">Case study</p>
-            <h3 class="research-title">
-              Onchain fund operations with a ZK chain
-            </h3>
-            <p class="research-body">
-              How an asset manager simplified fund lifecycles while keeping strategies and
-              positions confidential.
-            </p>
-            <a href="#" class="research-link">Download</a>
-          </article>
-
-          <article class="research-card">
-            <img
-              src="icon-doc-research.svg"
-              alt="Research document icon"
-              style="width:24px;height:auto;margin-bottom:6px;"
-            />
-            <p class="research-tag">Research</p>
-            <h3 class="research-title">
-              Institutional adoption of ZKsync
-            </h3>
-            <p class="research-body">
-              A deep dive into market structure, liquidity, and the role of sovereign ZK chains
-              in regulated finance.
-            </p>
-            <a href="#" class="research-link">Download</a>
-          </article>
-
-          <article class="research-card">
-            <img
-              src="icon-doc-research-2.svg"
-              alt="Research document icon"
-              style="width:24px;height:auto;margin-bottom:6px;"
-            />
-            <p class="research-tag">Research</p>
-            <h3 class="research-title">
-              The evolution of institutional blockchain infrastructure
-            </h3>
-            <p class="research-body">
-              From pilots and sandboxes to production-ready systems anchored to Ethereum.
-            </p>
-            <a href="#" class="research-link">Download</a>
-          </article>
-        </div>
-      </section>
-
-      <!-- PRODUCTION CTA -->
+      <!-- CTA -->
       <section class="cta" id="contact">
         <div class="cta-inner">
           <div class="cta-copy">
-            <!-- optional small icon / badge on CTA -->
-            <img
-              src="icon-cta-badge.svg"
-              alt="Production ready badge"
-              style="width:36px;height:auto;margin-bottom:12px;"
-            />
-            <h2 class="cta-title">
-              Production-ready blockchain for regulated finance.
-            </h2>
+            <img src="assets/Section.svg" alt="" class="cta-badge" />
+            <h2 class="cta-title">Production-ready blockchain for regulated finance.</h2>
             <p class="cta-body">
               Deploy Prividium with confidence. Keep data private, stay aligned with regulation,
               and anchor to Ethereum for unmatched security.
             </p>
           </div>
+
           <div class="cta-actions">
-            <a href="#" class="btn btn-primary btn-pill">
-              Book a demo
-            </a>
-            <a href="#" class="btn btn-secondary btn-pill">
-              Read the docs
-            </a>
+            <a href="#" class="btn btn-primary btn-pill">Book a demo</a>
+            <a href="#" class="btn btn-secondary btn-pill">Read the docs</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SIMPLE FORM / CONTACT (using Section → Form.svg as visual) -->
+      <section class="contact-strip">
+        <div class="contact-inner">
+          <div class="contact-copy">
+            <h3 class="contact-title">Ready to explore Prividium for your institution?</h3>
+            <p class="contact-body">
+              Share your requirements, and our team will follow up with a tailored conversation
+              around architecture, compliance, and rollout.
+            </p>
+          </div>
+          <div class="contact-visual">
+            <img src="assets/Section → Form.svg" alt="" />
           </div>
         </div>
       </section>
 
       <!-- FAQ -->
       <section class="faq">
-        <div class="faq-header">
-          <p class="section-eyebrow">Frequently asked questions</p>
-          <h2 class="section-title">
-            Everything you need to know about Prividium.
-          </h2>
-        </div>
+        <div class="faq-inner">
+          <div class="faq-header">
+            <p class="section-eyebrow">Frequently asked questions</p>
+            <h2 class="section-title">Everything you need to know about Prividium.</h2>
+          </div>
 
-        <div class="faq-list">
-          <article class="faq-item">
-            <h3 class="faq-question">
-              Does anchoring to Ethereum expose private data?
-            </h3>
-            <p class="faq-answer">
-              No. Only ZK proofs and minimal metadata are posted on Ethereum. These attest to
-              correctness of state transitions without revealing underlying transaction details
-              or balances.
-            </p>
-          </article>
+          <div class="faq-layout">
+            <div class="faq-list">
+              <article class="faq-item">
+                <h3>Does anchoring to Ethereum expose private data?</h3>
+                <p>No. Only proofs are shared — never transaction data.</p>
+              </article>
 
-          <article class="faq-item">
-            <h3 class="faq-question">
-              Is Prividium just another permissioned ledger?
-            </h3>
-            <p class="faq-answer">
-              Prividium uses cryptographic proofs rather than consortium trust. Every batch is
-              verifiable by anyone, while execution and data stay within your environment.
-            </p>
-          </article>
+              <article class="faq-item">
+                <h3>Is Prividium another permissioned ledger?</h3>
+                <p>
+                  No. ZK proofs replace consortium trust models, with verifiable execution and
+                  public settlement guarantees.
+                </p>
+              </article>
 
-          <article class="faq-item">
-            <h3 class="faq-question">
-              How can security hold if there is a single operator?
-            </h3>
-            <p class="faq-answer">
-              The operator controls ordering and policies, but cannot finalize invalid blocks.
-              Any incorrect state will fail verification, so results are constrained by the
-              proof system instead of operator behavior.
-            </p>
-          </article>
+              <article class="faq-item">
+                <h3>How does security hold with a single operator?</h3>
+                <p>
+                  Invalid blocks fail verification automatically. Ethereum and ZKsync enforce
+                  correctness at the settlement layer.
+                </p>
+              </article>
 
-          <article class="faq-item">
-            <h3 class="faq-question">
-              Is selective disclosure enough for regulators?
-            </h3>
-            <p class="faq-answer">
-              Selective disclosure lets regulators independently verify balances, flows, or
-              specific fields when they are ready, while institutions keep full ledgers private.
-            </p>
-          </article>
+              <article class="faq-item">
+                <h3>Is selective disclosure enough for regulators?</h3>
+                <p>
+                  Yes. Regulators and auditors can verify exactly what they need, backed by
+                  cryptographic proofs instead of manual reconciliations.
+                </p>
+              </article>
 
-          <article class="faq-item">
-            <h3 class="faq-question">
-              How does Prividium handle throughput and scale?
-            </h3>
-            <p class="faq-answer">
-              A single Prividium chain can handle high throughput, and enterprises can deploy
-              multiple chains in parallel that interoperate, scaling horizontally as demand grows.
-            </p>
-          </article>
+              <article class="faq-item">
+                <h3>How does Prividium scale?</h3>
+                <p>
+                  Prividium can scale horizontally with multiple instances and vertically by
+                  optimizing circuit design and proving infrastructure.
+                </p>
+              </article>
+            </div>
+
+            <div class="faq-visual">
+              <img src="assets/image 28.svg" alt="FAQ illustration" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -647,7 +457,7 @@
     <footer class="footer">
       <div class="footer-inner">
         <div class="footer-brand">
-          <img src="zksync-logo.svg" alt="zkSync logo" class="footer-logo" />
+          <img src="assets/zksync-logo.svg" alt="zkSync logo" class="footer-logo" />
           <p class="footer-tagline">
             ZKsync Prividium — private where it matters, connected where it counts.
           </p>
@@ -655,40 +465,41 @@
 
         <div class="footer-columns">
           <div class="footer-col">
-            <h4 class="footer-heading">Products</h4>
-            <a href="#" class="footer-link">Prividium</a>
-            <a href="#" class="footer-link">ZK Stack</a>
-            <a href="#" class="footer-link">ZKsync Era</a>
+            <h4>Products</h4>
+            <a href="#">Prividium</a>
+            <a href="#">ZK Stack</a>
+            <a href="#">ZKsync Era</a>
           </div>
+
           <div class="footer-col">
-            <h4 class="footer-heading">Developers</h4>
-            <a href="#" class="footer-link">Docs</a>
-            <a href="#" class="footer-link">GitHub</a>
-            <a href="#" class="footer-link">Ecosystem</a>
+            <h4>Developers</h4>
+            <a href="#">Docs</a>
+            <a href="#">GitHub</a>
+            <a href="#">Ecosystem</a>
           </div>
+
           <div class="footer-col">
-            <h4 class="footer-heading">Company</h4>
-            <a href="#" class="footer-link">About</a>
-            <a href="#" class="footer-link">Careers</a>
-            <a href="#" class="footer-link">Contact</a>
+            <h4>Company</h4>
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-meta">© ZKsync · For interview demo use</p>
+        <p>© ZKsync · For interview demo use</p>
       </div>
     </footer>
 
-  </div> <!-- /.page -->
+  </div>
 
-  <!-- Scroll animation for narrative section -->
+  <!-- Scroll animation script -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const section = document.querySelector(".narrative");
       const lines = Array.from(document.querySelectorAll(".narrative-line"));
-
-      if (!section || lines.length === 0) return;
+      if (!section || !lines.length) return;
 
       function easeInOut(t) {
         return t * t * (3 - 2 * t);
@@ -697,7 +508,6 @@
       function updateNarrative() {
         const rect = section.getBoundingClientRect();
         const vh = window.innerHeight;
-
         if (rect.bottom < 0 || rect.top > vh) return;
 
         const centerY = vh * 0.5;
@@ -707,9 +517,9 @@
         const count = lines.length;
         const segment = 1 / count;
 
-        lines.forEach((line, index) => {
-          const start = segment * index;
-          const end = segment * (index + 1);
+        lines.forEach((line, i) => {
+          const start = segment * i;
+          const end = segment * (i + 1);
           let local = (progress - start) / (end - start);
 
           if (local <= 0) {
@@ -720,9 +530,8 @@
             line.style.transform = "translateY(0)";
           } else {
             const t = easeInOut(local);
-            const y = 40 * (1 - t);
             line.style.opacity = t;
-            line.style.transform = `translateY(${y}px)`;
+            line.style.transform = `translateY(${40 * (1 - t)}px)`;
           }
         });
       }
@@ -732,5 +541,6 @@
       window.addEventListener("resize", updateNarrative);
     });
   </script>
+
 </body>
 </html>
