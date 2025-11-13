@@ -55,6 +55,14 @@ main {
   display: block;
 }
 
+/* Global image safety – no overflowing SVGs */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* NAVBAR */
 
 .nav {
@@ -361,6 +369,435 @@ main {
   opacity: 0;
   transform: translateY(40px);
 }
+
+/* =========================================================
+   GENERIC SECTION WRAPPER (below narrative)
+========================================================= */
+
+.section {
+  padding: 96px 80px;
+  background: #f5f7fb;
+}
+
+.section--alt {
+  background: #f0f3fa;
+}
+
+.section-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #5c6bf5;
+  margin: 0 0 12px;
+}
+
+.section-title {
+  font-size: 36px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #11141a;
+  margin: 0 0 12px;
+}
+
+.section-lead {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #636b7b;
+  margin: 0 0 32px;
+}
+
+/* =========================================================
+   ABOUT PRIVIDIUM – TWO BIG PANELS
+========================================================= */
+
+.section-about {
+  background: #f5f7fb;
+}
+
+.about-panels {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.about-panel {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 32px 32px 28px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;           /* keeps tall SVGs inside */
+}
+
+.about-illustration-wrapper {
+  padding: 8px 0 20px;
+}
+
+.about-illustration {
+  width: 100%;
+  height: auto;
+}
+
+.about-panel-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  color: #11141a;
+}
+
+.about-panel-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #636b7b;
+  margin: 0;
+}
+
+/* little four-diamond icon that sits under left panel */
+.about-floating-icon {
+  margin-top: 20px;
+  width: 80px;
+}
+
+/* =========================================================
+   CORE PILLARS – 4 SMALL CARDS (privacy, compliance, etc.)
+========================================================= */
+
+.about-pillars {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.about-pillar {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-pillar-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.about-pillar-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  color: #11141a;
+}
+
+.about-pillar-body {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #636b7b;
+  margin: 0;
+}
+
+/* =========================================================
+   USE CASES
+========================================================= */
+
+.section-usecases {
+  background: #f5f7fb;
+}
+
+.usecases-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 40px 40px 36px;
+  box-shadow: 0 12px 34px rgba(15, 23, 42, 0.04);
+}
+
+.usecases-header {
+  max-width: 720px;
+  margin-bottom: 32px;
+}
+
+.usecases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.usecase {
+  background: #f9fbff;
+  border-radius: 22px;
+  padding: 28px 28px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.usecase-illustration-wrapper {
+  padding-bottom: 10px;
+}
+
+.usecase-illustration {
+  width: 100%;
+}
+
+.usecase-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.usecase-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #636b7b;
+  margin: 0;
+}
+
+/* bottom-left decorative icon in this section */
+.usecases-floating-icon {
+  margin-top: 24px;
+  width: 78px;
+}
+
+/* =========================================================
+   “CONNECT WITHOUT TRADEOFFS” – COMPARISON & HIGHLIGHT
+========================================================= */
+
+.section-comparison {
+  background: #eef2fb;
+}
+
+.comparison-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr 1.1fr;
+  gap: 24px;
+  margin-top: 32px;
+  align-items: flex-start;
+}
+
+/* left: table */
+.comparison-table-card {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  overflow: hidden;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 14px 18px;
+}
+
+.comparison-table thead th {
+  background: #f4f5ff;
+  font-weight: 600;
+  text-align: left;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.comparison-table thead th:nth-child(2) {
+  background: linear-gradient(135deg, #8fb3ff, #4c7bff);
+  color: #ffffff;
+}
+
+.comparison-table tbody tr:nth-child(odd) td {
+  background: #fafbff;
+}
+
+/* middle and right highlight cards */
+.comparison-highlight {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px 24px 22px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comparison-highlight-illustration {
+  max-width: 180px;
+}
+
+.comparison-highlight-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.comparison-highlight-body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #636b7b;
+  margin: 0;
+}
+
+/* =========================================================
+   WHY ENTERPRISES MOVE TO PRIVIDIUM – FAQ + CASES
+========================================================= */
+
+.section-why {
+  background: #f5f7fb;
+}
+
+.why-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 40px;
+  margin-top: 32px;
+}
+
+/* Left: FAQ list / questions */
+.why-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.why-faq-item {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px 18px 14px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
+}
+
+.why-faq-q {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.why-faq-a {
+  font-size: 13px;
+  line-height: 1.65;
+  color: #636b7b;
+  margin: 0;
+}
+
+/* Right: research cards column */
+.why-research {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.research-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+.research-cover {
+  width: 70px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.research-body-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.research-body-link {
+  font-size: 13px;
+  color: #4456ff;
+  text-decoration: none;
+}
+
+/* =========================================================
+   TESTIMONIAL + GRADIENT CTA
+========================================================= */
+
+.section-testimonial {
+  background: #f5f7fb;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
+  padding: 32px 32px 0;
+}
+
+.testimonial-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) auto;
+  gap: 32px;
+  align-items: center;
+}
+
+.testimonial-quote {
+  font-size: 26px;
+  line-height: 1.5;
+  font-weight: 500;
+  margin: 0 0 24px;
+  color: #11141a;
+}
+
+.testimonial-meta {
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.testimonial-photo {
+  width: 220px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+/* gradient bar at bottom of testimonial */
+.testimonial-cta {
+  margin-top: 24px;
+  padding: 18px 24px 20px;
+  border-radius: 0 0 28px 28px;
+  background: linear-gradient(90deg, #4f46e5, #2563eb);
+  color: #ffffff;
+}
+
+.testimonial-cta-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.testimonial-cta-body {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.section-contact {
+  background: #f5f7fb;
+}
+
+.contact-layout {
+  display: g
+
 
 /* GENERIC SECTION TYPOGRAPHY */
 
