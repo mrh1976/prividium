@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ZKsync Prividium – Execute Privately, Verify Publicly</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+
+    <!-- NAVBAR -->
+    <header class="nav">
+      <div class="nav-left">
+        <a href="#" class="nav-logo">
+          <!-- Quick SVG “ZKsync-ish” placeholder logo -->
+          <span class="nav-logo-mark"></span>
+          <span class="nav-logo-text">zkSync</span>
+        </a>
+
+        <nav class="nav-links">
+          <button class="nav-link">
+            <span>Network</span>
+            <span class="nav-link-chevron">▾</span>
+          </button>
+          <button class="nav-link">
+            <span>Products</span>
+            <span class="nav-link-chevron">▾</span>
+          </button>
+          <button class="nav-link">
+            <span>Developers</span>
+            <span class="nav-link-chevron">▾</span>
+          </button>
+          <button class="nav-link">
+            <span>Discover</span>
+            <span class="nav-link-chevron">▾</span>
+          </button>
+        </nav>
+      </div>
+
+      <div class="nav-right">
+        <a href="#contact" class="btn btn-primary btn-pill btn-nav">
+          <span class="btn-bg-corner btn-bg-corner-left"></span>
+          <span class="btn-bg-corner btn-bg-corner-right"></span>
+          Contact us
+        </a>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main class="hero-wrapper">
+      <section class="hero">
+        <div class="hero-content">
+          <p class="hero-eyebrow">ZKsync Prividium</p>
+
+          <h1 class="hero-title">
+            Execute Privately,<br />
+            Verify Publicly
+          </h1>
+
+          <p class="hero-subtitle hero-subtitle-top">
+            Where public and private blockchains converge.
+          </p>
+
+          <p class="hero-subtitle">
+            Operate with full privacy, compliance, and control — all while inheriting
+            Ethereum’s security and connectivity.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#" class="btn btn-primary btn-pill">
+              <span class="btn-bg-corner btn-bg-corner-left"></span>
+              <span class="btn-bg-corner btn-bg-corner-right"></span>
+              Download case study
+            </a>
+
+            <a href="#contact" class="btn btn-secondary btn-pill">
+              Talk to our team
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <!-- Simplified hero visualization based on your Figma composition -->
+          <div class="hero-orbit hero-orbit-outer"></div>
+          <div class="hero-orbit hero-orbit-middle"></div>
+          <div class="hero-orbit hero-orbit-inner"></div>
+          <div class="hero-core">
+            <div class="hero-core-inner"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  </div>
+</body>
+</html>
