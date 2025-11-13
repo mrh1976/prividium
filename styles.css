@@ -141,7 +141,7 @@ body {
   min-width: 130px;
 }
 
-/* Small highlights in the primary buttons */
+/* Small highlights on primary buttons */
 .btn-bg-corner {
   pointer-events: none;
   position: absolute;
@@ -188,13 +188,13 @@ body {
     #e4f0ff 45%,
     var(--bg-page) 100%
   );
-  padding-bottom: 24px; /* small fade gap before observers */
+  padding-bottom: 24px; /* subtle fade gap before observers */
 }
 
 .hero {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 80px 80px 64px; /* bottom was 120px */
+  padding: 80px 80px 64px;
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 80px;
@@ -249,7 +249,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: auto;    /* keeps it on the right in desktop grid */
+  margin-left: auto; /* stays right side on desktop */
 }
 
 .hero-animation-img {
@@ -278,7 +278,7 @@ body {
 
   .hero-visual {
     max-width: 440px;
-    margin-right: auto; /* bring image under text, aligned left-ish */
+    margin-right: auto; /* hero image comes under text, left-ish */
   }
 }
 
@@ -398,12 +398,12 @@ body {
   margin: 180px auto 220px;
   padding: 0 80px;
   position: relative;
-  min-height: 260vh; /* room to "walk" through lines */
+  min-height: 260vh; /* room to “walk” through lines */
 }
 
 .narrative-inner {
   position: sticky;
-  top: 20vh;      /* pins text in upper third of screen */
+  top: 20vh; /* pins text in upper third of screen */
   text-align: center;
 }
 
@@ -441,5 +441,113 @@ body {
 
   .narrative-line {
     font-size: 24px;
+  }
+}
+
+/* USE CASES SECTION */
+
+.usecases {
+  max-width: 1280px;
+  margin: 0 auto 140px;
+  padding: 0 80px;
+}
+
+.usecases-inner {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 48px 48px 40px;
+  box-shadow:
+    0 14px 40px rgba(15, 23, 42, 0.08),
+    0 1px 0 rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.usecases-header {
+  max-width: 720px;
+  margin-bottom: 40px;
+}
+
+.usecases-eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6366f1;
+  margin: 0 0 12px;
+}
+
+.usecases-title {
+  font-size: 32px;
+  line-height: 1.35;
+  font-weight: 600;
+  margin: 0 0 16px;
+  color: #0b1020;
+}
+
+.usecases-intro {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4b4f5c;
+  margin: 0;
+}
+
+/* Cards grid */
+
+.usecases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 32px;
+}
+
+.usecase-card {
+  background: #f8fafc;
+  border-radius: 18px;
+  padding: 20px 20px 18px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+.usecase-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: #0b1020;
+}
+
+.usecase-body {
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+  color: #4b4f5c;
+}
+
+/* Use cases responsive */
+
+@media (max-width: 1024px) {
+  .usecases {
+    padding: 0 24px;
+    margin-bottom: 120px;
+  }
+
+  .usecases-inner {
+    padding: 32px 24px 28px;
+  }
+
+  .usecases-title {
+    font-size: 26px;
+  }
+
+  .usecases-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .usecases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .usecases {
+    margin-bottom: 96px;
   }
 }
