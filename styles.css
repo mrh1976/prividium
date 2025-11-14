@@ -119,12 +119,13 @@ main {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 80px 80px 120px;
+  padding: 80px 80px 40px;
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 80px;
   align-items: center;
 }
+
 
 .hero-eyebrow {
   text-transform: uppercase;
@@ -166,15 +167,68 @@ main {
   max-width: 520px;
 }
 
+/* HERO BACKGROUND WRAPPER ------------------------------------------ */
+.hero-wrapper {
+  /* soft zkSync-style dual gradient */
+  background:
+    radial-gradient(120% 200% at 0% 0%, #dde8ff 0%, #f7f9fc 55%),
+    radial-gradient(120% 220% at 100% 0%, #e4f3ff 0%, #f7f9fc 60%);
+  padding-bottom: 80px;    /* space only for hero; gradient ends here */
+}
+
+
+
 /* =================================================================== */
 /* OBSERVERS */
 /* =================================================================== */
 
+/* SELECT OBSERVERS CARD --------------------------------------------- */
 .observers {
+  position: relative;
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 80px 120px;
+  margin: 0 auto 120px;
+  padding: 40px 80px;
 }
+
+/* card background behind everything in the section */
+.observers::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f7f8ff;
+  border-radius: 32px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.06);
+  z-index: -1;
+}
+
+.observers-eyebrow {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: #6c6fa4;
+  margin: 0 0 30px;
+}
+
+/* logo rows stay centered inside card */
+.observers-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+  margin-bottom: 32px;
+}
+
+.observers-row:last-child {
+  margin-bottom: 0;
+}
+
+.observers-row img {
+  height: 46px;
+  object-fit: contain;
+  filter: grayscale(10%);
+}
+
 
 .section-eyebrow {
   text-transform: uppercase;
@@ -427,5 +481,20 @@ main {
 
   .nav-links {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .observers {
+    padding: 28px 20px;
+  }
+
+  .observers-row {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .observers-row img {
+    height: 32px;
   }
 }
