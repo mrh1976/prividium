@@ -1,3 +1,29 @@
+/* HERO GRADIENT BACKGROUND */
+.hero-wrapper {
+  width: 100%;
+  background: linear-gradient(
+      180deg,
+      #e8f1ff 0%,
+      #f0f5ff 30%,
+      #f7f9fc 70%,
+      #f7f9fc 100%
+  );
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+/* Prevent overrides */
+body {
+  background: #f7f9fc !important;
+}
+
+.hero {
+  background: transparent !important;
+}
+
+
+
+
 /* =================================================================== */
 /* GLOBAL SETTINGS */
 /* =================================================================== */
